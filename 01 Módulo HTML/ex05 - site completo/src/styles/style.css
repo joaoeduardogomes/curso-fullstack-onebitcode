@@ -1,0 +1,15 @@
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+form section {
+    margin: 1rem;
+}
+
+form section input, form section select {
+    margin-right: 1rem;
+}
