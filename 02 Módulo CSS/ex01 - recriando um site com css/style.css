@@ -1,0 +1,35 @@
+:root {
+    --amarelo: #f1c40f;
+    --azul: #2c3e50;
+    --vermelho: #e74c3c;
+}
+
+body {
+    background-color: var(--azul);
+}
+
+main {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+h1, li {
+    color: white;
+}
+
+#days-of-week > h3 {
+    color: var(--amarelo);
+}
+
+#activities > h2 {
+    color: var(--azul);
+    background-color: var(--amarelo);
+    padding: 0.3rem;
+    border-radius: 5px;
+    max-width: 32%;
+    border: 2px solid black;
+}
+
+.astronomy-class {
+    color: var(--vermelho);
+}
