@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --fonte-principal: 'Montserrat', sans-serif;
+    --fonte-secundaria: 'Open Sans', sans-serif;
+    --fonte-elementos-post-content: 'Roboto', sans-serif;
+
+    --cor-background: #fffafa;
+    --cor-data: #008080;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+.post-container {
+    background-color: var(--cor-background);
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.post {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+h1 {
+    font-family: var(--fonte-principal);
+    font-size: 2rem;
+}
+
+.date {
+    color: var(--cor-data);
+    font-family: var(--fonte-elementos-post-content);
+    font-size: 0.85rem;
+}
+
+.post-content {
+    font-family: var(--fonte-secundaria);
+    font-size: 1rem;
+}
