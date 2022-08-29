@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: darkgray;
+    min-height: 100vh;
+    display: flex;
+    gap: 0px 15px;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 100%;
+    height: 200px;
+    border: 2px solid black;
+    background-color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-basis: 200px; Quando o layout quebra, o elemento que passa pra baixo ocupa esse tamanho todo */
+    /* flex-grow: 1; faz o item ocupar todo espaço disponível (no caso, na horizontal, porque o flex tá com a direção "row") */
+}
+
+.item1 {
+
+}
+
+.item2 {
+    /* flex: 1 0 200px; O item2 vai ocupar todo o espaço vazio disponível, evitando que fiquem áreas em branco na página. */
+    /* O "flex" recebe as propriedades: "flex-grow" > "flex-shrink" > "flex-basis"*/
+}
+
+.item3 {
+
+}
