@@ -1,0 +1,11 @@
+.textBuy {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $primary-color; //conseguimos usar a variável de cor aqui mesmo ela tendo sido declarada em outro arquivo(isamos o import pelo "style.scss").
+}
+.btn {
+    padding: 10px 15px;
+    border: 1px solid red;
+    background-color: $secondary-color;
+    cursor: pointer;
+}

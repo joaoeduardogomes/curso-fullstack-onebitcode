@@ -1,0 +1,7 @@
+// Import Colors
+@import "./colors/colors.scss";
+
+// Import Home
+@import "./pages/home.scss";
+
+// Acima, tivemos que importar as cores antes da home,uma vez que a home usa variáveis de cores definidas em "colors.scss". É importante respeitar a ordem da hierarquia.
