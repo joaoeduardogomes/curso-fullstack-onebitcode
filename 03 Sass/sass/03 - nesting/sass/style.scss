@@ -1,0 +1,31 @@
+// .classe1 ul {
+//     background-color: red;
+// }
+
+// .classe1 li {
+//     background-color: blue;
+// }
+
+// Nos permite agrupar as configurações dentro de um elemento, ao invés de listar uma após a outra. (equivalente a usar o código acima)
+.classe1 {
+    ul {
+        background-color: red;
+    }
+
+    li {
+        background-color: blue;
+        padding: 10px 0;
+    }
+}
+
+button {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+
+    &:hover { 
+        //Usamos um pointer '&', como na linguagem C. Neste caso, é o equivalente a usar "button:hover".
+        background-color: red;
+        transition: all 500ms ease-in-out;
+    }
+}
