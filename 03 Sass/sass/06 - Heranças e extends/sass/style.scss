@@ -1,0 +1,25 @@
+// Pra quando o elemento tem a classe-padrão "btn" (herança)
+.btn {
+    width: 125px;
+    padding: 10px 0;
+    border-radius: 20px;
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+
+    &.btn-amarelo {
+        background-color: yellow;
+    }
+
+    &.btn-azul {
+        background-color: blue;
+        color: white;
+    }
+}
+
+// Pra quando o elemento não tem a classe-padrão "btn" (extend)
+.btn-roxo {
+    @extend .btn;
+    background-color: purple;
+    color: white;
+}
