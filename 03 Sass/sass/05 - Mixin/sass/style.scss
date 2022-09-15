@@ -1,0 +1,30 @@
+// Criando um Mixin (mixar informações num único bloco):
+@mixin text-style($color, $font-size, $font-family) {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+}
+
+
+.texts {
+    h1 {
+        // Sem mixin:
+        // color: #ff4043;
+        // font-size: 34px;
+        // font-family: Arial, Helvetica, sans-serif;
+
+        // Com mixin:
+        @include text-style(#ff4043, 34px, Arial);
+    }
+    p {
+        // Sem mixin:
+        // color: blue;
+        // font-size: 22px;
+        // font-family: sans-serif;
+
+        // Com mixin:
+        @include text-style(blue, 22px, sans-serif);
+    }
+}
+
+// É semelhante a uma função. Definimos os parâmetros no "@mixin" e passamos os valores desses parâmetros na estilização do elemento.
