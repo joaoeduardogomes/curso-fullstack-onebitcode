@@ -1,0 +1,31 @@
+@charset "UTF-8";
+    //Exemplo de uso de uma função sass:
+// h1#title {
+//     color: mix(black, green, 50%);
+// }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@function color-title($background-color) {
+    @if(lightness($background-color) > 50) {
+        // Se a cor de fundo for clara o suficiente pra passar de 50, a cor preta será retornada.
+        @return black;
+    }
+    @else {
+        @return white;
+    }
+}
+
+@mixin background-color-mixin($color) {
+    // Aqui juntamos o mixin com a função criada. Se o fundo for escuro, a cor do texto será branca. Se o fundo for claro, a for do texto será preta.
+    background-color: $color;
+    color: color-title($color);
+}
+
+.title {
+    height: 100vh;
+    @include background-color-mixin(white);
+}
