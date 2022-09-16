@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+.container {
+    p {
+        @include text-style($primary-color, 22px, arial);
+    }
+}

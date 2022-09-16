@@ -1,0 +1,5 @@
+@charset "UTF-8";
+
+#cadastro-text {
+    @include text-style(blue, 1rem, sans-serif);
+}

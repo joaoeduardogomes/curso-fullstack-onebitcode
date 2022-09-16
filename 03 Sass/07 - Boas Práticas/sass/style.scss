@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+// importando as cores:
+@import "./variables/colors/colors.scss";
+
+// importando os elementos comuns a todo o código:
+@import "./variables/common/common.scss";
+
+// importando o cadastro.scss:
+@import "./pages/cadastro.scss";
+
+// importando o login.scss:
+@import "./pages/login.scss";
