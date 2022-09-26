@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Spy do Bootstrap</title>
+    <!-- Bootstrap: -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        .scrollSpy {
+            height: 385px;
+            overflow: auto;
+            position: relative;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scroll Spy do Bootstrap</h1>
+
+    <!-- Pra adicionar um novo item, basta adicionar o elemento no corpo do conteúdo e depois seu referencial na navegação lateral. O JS irá identificar automaticamente. E a navegação lateral irá expandir conforme necessário. -->
+    
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-3">
+                <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link" href="#item-1">Item 1</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+                            <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+                        </nav>
+                        <a class="nav-link" href="#item-2">Item 2</a>
+                        <a class="nav-link" href="#item-3">Item 3</a>
+                        <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+                            <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+                        </nav>
+                    </nav>
+                </nav>
+            </div>
+            <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0" class="col scrollSpy">
+                <h4 id="item-1">Item 1</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ratione inventore animi qui numquam eum debitis quo eveniet magni, facilis velit iusto eos et totam, ex corrupti ipsa nihil! Omnis alias maxime voluptatibus enim earum eos assumenda ipsam repellat sapiente, ex dolore reprehenderit deserunt rerum numquam, ea error, doloremque iusto?</p>
+                <h5 id="item-1-1">Item 1-1</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, maiores laboriosam! Ea laboriosam atque quia in nostrum libero ipsa, similique, perferendis sapiente nihil, a eveniet corporis? Magnam, cupiditate beatae. Exercitationem nam odio ipsum minus magnam quod a. Aspernatur facilis repudiandae esse modi cum quae eaque iste labore at neque. Exercitationem!</p>
+                <h5 id="item-1-2">Item 1-2</h5>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime commodi in minima labore qui ipsa assumenda dolor, ipsam nostrum eligendi velit quo ducimus reiciendis asperiores ea odit tenetur quam, nemo ullam impedit repellendus molestiae error. Animi cumque nostrum consequatur, nihil accusantium aspernatur quasi ut soluta hic corporis quos perferendis quia?</p>
+                <h4 id="item-2">Item 2</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, necessitatibus quam! Atque tenetur itaque cum quibusdam hic ipsam saepe fugiat doloribus aliquam labore deserunt facilis quam assumenda deleniti illum, unde adipisci ducimus nisi iure vitae possimus mollitia. Possimus maiores iste esse, corrupti illum at, pariatur ratione illo nihil doloremque fugit.</p>
+                <h4 id="item-3">Item 3</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere quasi doloremque aliquam nemo, eos, animi aliquid vel ipsum qui ut, aperiam cupiditate quia quos deserunt. Consequuntur praesentium veritatis in doloremque autem ratione delectus repellendus voluptates, aliquam facilis enim esse optio corporis necessitatibus eaque ut dolorum ipsam ipsum sed ea! Officia.</p>
+                <h5 id="item-3-1">Item 3-1</h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi beatae ad, rerum eaque doloremque officiis enim error culpa qui, voluptas modi est commodi excepturi amet incidunt nobis itaque vel dolor harum quibusdam, ex mollitia? Voluptates aperiam rerum reiciendis cum tempore. Maxime odit magnam repellat. Ut incidunt recusandae optio doloremque perspiciatis.</p>
+                <h5 id="item-3-2">Item 3-2</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero molestias officiis provident illum odio? Dignissimos accusamus esse sunt obcaecati error distinctio, ex tempora a harum in, necessitatibus voluptatem, sed qui. Quibusdam porro at vitae voluptatum cumque, consectetur asperiores itaque similique aliquam ab enim modi totam quia delectus fugit, exercitationem ullam.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Bootstrap: -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
+
+    <!-- Script do Scroll Spy: -->
+    <script>
+            var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+                target: '#navbar-example'
+            })
+    </script>
+</body>
+</html>
