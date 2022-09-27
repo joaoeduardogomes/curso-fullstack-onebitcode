@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$fonte-padrao: 'Rubik', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fonte-padrao;
+    color: $cor-texto;
+    background: {
+        color: $cor-fundo;
+    }
+}
+
+.header-nav {
+    background-color: transparent;
+}
+
+.logo-header {
+    max-width: 240px;
+}
+
+.header-nav, h2 {
+    text-transform: uppercase;
+}
+
+p:not(.texto), .botao {
+    font-variant: small-caps;
+}
+
+.secao {
+    height: 100vh;
+    padding: 1rem;
+    background: {
+        size: cover;
+        repeat: no-repeat;
+        position: center center;
+    }
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    .botao {
+        padding: 1rem 3rem;
+    }
+}
