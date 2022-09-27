@@ -33,16 +33,25 @@ p:not(.texto), .botao {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  text-shadow: 1px 1px 2px black;
+}
+.secao div.conteudo-secao {
+  margin-top: 8rem;
 }
 .secao h2 {
-  margin-bottom: 2rem;
+  font-weight: 400;
 }
 .secao .botao {
   padding: 1rem 3rem;
+  margin-top: 2rem;
 }
 
 .secao1 {
   background-image: url("../../img/home/01.jpg");
+}
+
+.secao2 {
+  background-image: url("../../img/home/02.jpg");
 }
 
 /*# sourceMappingURL=style.css.map */

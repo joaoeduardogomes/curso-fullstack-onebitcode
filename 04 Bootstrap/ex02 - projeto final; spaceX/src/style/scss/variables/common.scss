@@ -40,12 +40,18 @@ p:not(.texto), .botao {
         repeat: no-repeat;
         position: center center;
     }
+    text-shadow:  1px 1px 2px black;
+
+    div.conteudo-secao {
+        margin-top: 8rem;
+    }
 
     h2 {
-        margin-bottom: 2rem;
+        font-weight: 400;
     }
 
     .botao {
         padding: 1rem 3rem;
+        margin-top: 2rem;
     }
 }
