@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+// Importação dos atributos-base:
+@import 'variables/colors.scss';
+
+// Importação das páginas:
+@import 'pages/home.scss';
+
+@import 'pages/falcon9.scss';
+
+@import 'pages/human-space-flight.scss';
