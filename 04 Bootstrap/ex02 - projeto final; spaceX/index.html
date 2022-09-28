@@ -11,6 +11,9 @@
     <!-- Bootstrap CSS: -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <!-- Bootstrap icons CSS: -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
     <!-- AOS Animate CSS: -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
@@ -38,15 +41,16 @@
                 </div>
             </div>
         </nav>
-        <div class="container conteudo-secao">
+        <div class="container conteudo-secao" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
             <p class="h5">Lançamento a Caminho</p>
             <h2 class="display-4 titulo-secao">Missão Equipe-3</h2>
             <button type="button" class="btn btn-outline-light botao">Saiba Mais</button>
+            <a href="#secao2"><img src="src/img/home/arrowDown.gif" alt="seta apontando para baixo" class="seta"></a>
         </div>
     </section>
 
-    <section class="container-fluid secao secao2">
-        <div class="container conteudo-secao">
+    <section class="container-fluid secao secao2" id="secao2">
+        <div class="container conteudo-secao" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
             <p class="h5">Missão Concluída</p>
             <h2 class="display-4 titulo-secao">Missão Equipe-2
                 <br>
@@ -55,7 +59,37 @@
         </div>
     </section>
 
-    
+    <section class="container-fluid secao secao3">
+        <div class="container conteudo-secao" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <p class="h5">Missão Concluída</p>
+            <h2 class="display-4 titulo-secao">Dragon Retornou 
+                <br>
+                Para A Terra</h2>
+            <button class="btn btn-outline-light botao">Saiba Mais</button>
+        </div>
+    </section>
+
+    <section class="container-fluid secao secao4">
+        <div class="container conteudo-secao" data-aos="fade-down-right" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <h2 class="display-4 titulo-secao">Starship Pousa 
+                <br>
+                Astronautas na Lua</h2>
+            <button class="btn btn-outline-light botao">Saiba Mais</button>
+        </div>
+    </section>
+
+    <footer class="container-fluid footer">
+        <span class="footer-texto">OneBitCode © 2021</span>
+        <a href="#" target="_blank" class="btn btn-outline-light footer-botao">
+            <i class="bi bi-instagram"></i> Instagram
+        </a>
+        <a href="#" class="btn btn-outline-light footer-botao">
+            <i class="bi bi-youtube"></i> YouTube
+        </a>
+        <a href="#" class="btn btn-outline-light footer-botao">
+            <i class="bi bi-twitter"></i> Twitter
+        </a>
+    </footer>
 
     
     <!-- Bootstrap JS: -->

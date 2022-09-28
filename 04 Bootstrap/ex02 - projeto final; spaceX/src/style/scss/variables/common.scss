@@ -6,6 +6,7 @@ $fonte-padrao: 'Rubik', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 body {
@@ -51,7 +52,50 @@ p:not(.texto), .botao {
     }
 
     .botao {
+        font-size: 1.3rem;
         padding: 1rem 3rem;
         margin-top: 2rem;
+    }
+}
+
+.seta {
+    max-width: 160px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    // width: 50%;
+
+    margin-top: 4rem;
+}
+
+.footer {
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    .footer-texto {
+        color: $cor-copyright;
+    }
+
+    .footer-botao {
+        color: $cor-texto;
+        border-color: $cor-texto;
+        &:hover {
+            color: $cor-fundo;
+            border-color: $cor-texto;
+        }
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .footer {
+        height: fit-content;
+        padding: 1rem;
+        flex-direction: column;
+        flex-wrap: nowrap;
     }
 }

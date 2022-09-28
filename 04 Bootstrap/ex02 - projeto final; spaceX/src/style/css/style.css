@@ -1,8 +1,10 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 body {
@@ -42,16 +44,63 @@ p:not(.texto), .botao {
   font-weight: 400;
 }
 .secao .botao {
+  font-size: 1.3rem;
   padding: 1rem 3rem;
   margin-top: 2rem;
 }
 
+.seta {
+  max-width: 160px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+}
+
+.footer {
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.footer .footer-texto {
+  color: #a3a3a3;
+}
+.footer .footer-botao {
+  color: #FAFAFF;
+  border-color: #FAFAFF;
+}
+.footer .footer-botao:hover {
+  color: #30343F;
+  border-color: #FAFAFF;
+}
+
+@media screen and (max-width: 545px) {
+  .footer {
+    height: fit-content;
+    padding: 1rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
 .secao1 {
   background-image: url("../../img/home/01.jpg");
 }
 
 .secao2 {
   background-image: url("../../img/home/02.jpg");
+}
+
+.secao3 {
+  background-image: url("../../img/home/03.gif");
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.25);
+}
+
+.secao4 {
+  background-image: url("../../img/home/04.jpg");
 }
 
 /*# sourceMappingURL=style.css.map */
