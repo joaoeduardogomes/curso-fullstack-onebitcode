@@ -47,21 +47,20 @@
 #falcon-secao3 {
     .item-carrossel {
         padding-top: 10%;
-        padding-left: 10rem;
+        padding-left: 15%;
         height: 100vh;
         background: {
-            size: cover;
+            size: contain;
             repeat: no-repeat;
-            position: center center;
+            position: center;
+        }
+        h4 {
+            font-size: 1.2rem;
+            font-weight: 300;
         }
         .texto {
             max-width: 500px;
         }
-    }
-    #carrossel1 {
-        background-image: url('../../img/falcon9/03.jpg');
-
-
         .tabela {
             max-width: 550px;
             background-color: rgba(0, 0, 0, 0.2);
@@ -74,8 +73,19 @@
             text-align: right;
         }
     }
-
-    #carrossel2 {
+    #carrossel-1 {
+        background-image: url('../../img/falcon9/03.jpg');
+    }
+    #carrossel-2 {
         background-image: url('../../img/falcon9/04.jpg');
+    }
+    #carrossel-3 {
+        background-image: url('../../img/falcon9/05.jpg');
+    }
+    #carrossel-4 {
+        background-image: url('../../img/falcon9/06.jpg');
+    }
+    #carrossel-5 {
+        background-image: url('../../img/falcon9/07.jpg');
     }
 }

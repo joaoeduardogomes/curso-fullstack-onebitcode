@@ -92,6 +92,9 @@ p:not(.texto), .botao {
 }
 
 @media screen and (max-width: 545px) {
+    html {
+        font-size: 8px;
+    }
     .footer {
         height: fit-content;
         padding: 1rem;

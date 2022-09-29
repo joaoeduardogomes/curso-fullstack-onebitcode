@@ -79,6 +79,9 @@ p:not(.texto), .botao {
 }
 
 @media screen and (max-width: 545px) {
+  html {
+    font-size: 8px;
+  }
   .footer {
     height: fit-content;
     padding: 1rem;
@@ -140,31 +143,44 @@ p:not(.texto), .botao {
 
 #falcon-secao3 .item-carrossel {
   padding-top: 10%;
-  padding-left: 10rem;
+  padding-left: 15%;
   height: 100vh;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
+}
+#falcon-secao3 .item-carrossel h4 {
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 #falcon-secao3 .item-carrossel .texto {
   max-width: 500px;
 }
-#falcon-secao3 #carrossel1 {
-  background-image: url("../../img/falcon9/03.jpg");
-}
-#falcon-secao3 #carrossel1 .tabela {
+#falcon-secao3 .item-carrossel .tabela {
   max-width: 550px;
   background-color: rgba(0, 0, 0, 0.2);
 }
-#falcon-secao3 #carrossel1 th {
+#falcon-secao3 .item-carrossel th {
   font-weight: 600;
   font-variant: small-caps;
 }
-#falcon-secao3 #carrossel1 td {
+#falcon-secao3 .item-carrossel td {
   text-align: right;
 }
-#falcon-secao3 #carrossel2 {
+#falcon-secao3 #carrossel-1 {
+  background-image: url("../../img/falcon9/03.jpg");
+}
+#falcon-secao3 #carrossel-2 {
   background-image: url("../../img/falcon9/04.jpg");
+}
+#falcon-secao3 #carrossel-3 {
+  background-image: url("../../img/falcon9/05.jpg");
+}
+#falcon-secao3 #carrossel-4 {
+  background-image: url("../../img/falcon9/06.jpg");
+}
+#falcon-secao3 #carrossel-5 {
+  background-image: url("../../img/falcon9/07.jpg");
 }
 
 /*# sourceMappingURL=style.css.map */
