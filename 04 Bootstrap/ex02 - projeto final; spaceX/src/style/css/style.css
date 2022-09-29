@@ -80,7 +80,7 @@ p:not(.texto), .botao {
 
 @media screen and (max-width: 545px) {
   html {
-    font-size: 8px;
+    font-size: 12px;
   }
   .footer {
     height: fit-content;
@@ -104,6 +104,25 @@ p:not(.texto), .botao {
 
 #home-secao4 {
   background-image: url("../../img/home/04.jpg");
+}
+
+.tabela {
+  max-width: 550px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+th {
+  font-weight: 600;
+  font-variant: small-caps;
+}
+
+td {
+  text-align: right;
+}
+
+.texto {
+  max-width: 500px;
+  font-size: 1.2rem;
 }
 
 #falcon-secao1 {
@@ -137,15 +156,15 @@ p:not(.texto), .botao {
   text-align: left;
   max-width: 600px;
   margin-top: 6rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 3.2rem;
 }
 
 #falcon-secao3 .item-carrossel {
   padding-top: 10%;
   padding-left: 15%;
-  height: 100vh;
-  background-size: contain;
+  min-height: 100vh;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -153,19 +172,10 @@ p:not(.texto), .botao {
   font-size: 1.2rem;
   font-weight: 300;
 }
-#falcon-secao3 .item-carrossel .texto {
-  max-width: 500px;
-}
-#falcon-secao3 .item-carrossel .tabela {
-  max-width: 550px;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-#falcon-secao3 .item-carrossel th {
-  font-weight: 600;
-  font-variant: small-caps;
-}
-#falcon-secao3 .item-carrossel td {
-  text-align: right;
+#falcon-secao3 .controle-carrossel {
+  background-color: black;
+  border-radius: 50%;
+  padding: 1.5rem;
 }
 #falcon-secao3 #carrossel-1 {
   background-image: url("../../img/falcon9/03.jpg");
@@ -181,6 +191,13 @@ p:not(.texto), .botao {
 }
 #falcon-secao3 #carrossel-5 {
   background-image: url("../../img/falcon9/07.jpg");
+}
+
+#falcon-secao4 {
+  background-image: url("../../img/falcon9/08.jpg");
+}
+#falcon-secao4 div:first-child {
+  margin-top: 8rem;
 }
 
 /*# sourceMappingURL=style.css.map */
