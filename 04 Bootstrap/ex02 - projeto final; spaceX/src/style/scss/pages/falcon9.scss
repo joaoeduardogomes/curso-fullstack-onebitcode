@@ -1,0 +1,81 @@
+#falcon-secao1{
+    background-image: url('../../img/falcon9/01.jpg');
+    text-align: center;
+
+    h2 {
+        font: {
+            size: 6rem;
+            weight: 600;
+        }
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .seta {
+        margin-left: 0;
+    }
+}
+
+#falcon-numeros {
+    h2 {
+        font: {
+            size: 5rem;
+            weight: 500;
+        }
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+}
+
+#falcon-secao2 {
+    background-image: url('../../img/falcon9/02.jpg');
+    background-position: center top;
+
+    .texto {
+        text-align: left;
+        max-width: 600px;
+        margin-top: 6rem;
+        font-size: 1.5rem;
+        line-height: 3.2rem;
+    }
+}
+
+#falcon-secao3 {
+    .item-carrossel {
+        padding-top: 10%;
+        padding-left: 10rem;
+        height: 100vh;
+        background: {
+            size: cover;
+            repeat: no-repeat;
+            position: center center;
+        }
+        .texto {
+            max-width: 500px;
+        }
+    }
+    #carrossel1 {
+        background-image: url('../../img/falcon9/03.jpg');
+
+
+        .tabela {
+            max-width: 550px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        th {
+            font-weight: 600;
+            font-variant: small-caps;
+        }
+        td {
+            text-align: right;
+        }
+    }
+
+    #carrossel2 {
+        background-image: url('../../img/falcon9/04.jpg');
+    }
+}
