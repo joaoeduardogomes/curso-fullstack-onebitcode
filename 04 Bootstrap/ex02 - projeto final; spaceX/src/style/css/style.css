@@ -47,6 +47,10 @@ p:not(.texto), .botao {
   font-size: 1.3rem;
   padding: 1rem 3rem;
   margin-top: 2rem;
+  border: 2px solid #FAFAFF;
+}
+.secao .botao:hover {
+  background-color: #FAFAFF;
 }
 
 .seta {
@@ -214,6 +218,14 @@ td {
   margin: auto;
   margin-bottom: 2rem;
   padding: 0.5rem;
+}
+
+#falcon-secao6 div {
+  padding-top: 15rem;
+}
+#falcon-secao6 a {
+  color: #a3a3a3;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -55,6 +55,10 @@ p:not(.texto), .botao {
         font-size: 1.3rem;
         padding: 1rem 3rem;
         margin-top: 2rem;
+        border: 2px solid $cor-texto;
+        &:hover {
+            background-color: $cor-texto;
+        }
     }
 }
 
