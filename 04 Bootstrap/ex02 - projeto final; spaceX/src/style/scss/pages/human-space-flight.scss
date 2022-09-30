@@ -1,0 +1,91 @@
+// Os Mixin são usados pra alinhar divs à esquerda ou à direita. Na página, configuramos pra alinhar os textos das missões.
+
+// div com conteúdo pra direita da página:
+@mixin alinhar-direita {
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// div com conteúdo pra esquerda da página.
+@mixin alinhar-esquerda {
+    right: 70%;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+#humanSF-secao1 {
+    background-image: url('../../img/humanFlight/01.jpg');
+
+    div#humanSF-titulo {
+        margin: auto;
+        text-align: center;
+        margin-top: 15%;
+    }
+    .seta {
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+
+#humanSF-secao2 {
+    p.texto {
+        font-size: 1.3rem;
+        text-align: center;
+        margin: auto;
+        max-width: 700px;
+        color: $cor-copyright;
+
+        a {
+            color: $cor-texto;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-bottom: 1px solid $cor-texto;
+        }
+    }
+}
+
+#humanSF-secao3 {
+    background-image: url('../../img/humanFlight/02.jpg');
+}
+
+#humanSF-secao4 {
+    background-image: url('../../img/humanFlight/03.jpg');
+}
+
+#humanSF-secao5 {
+    background-image: url('../../img/humanFlight/04.jpg');
+}
+
+#humanSF-secao6 {
+    background-image: url('../../img/humanFlight/05.jpg');
+}
+
+// Tamanho dos textos e posiçao em comum. As possition e o tamanho da caixa são importantes pra usar os mixin:
+#humanSF-secao3, #humanSF-secao4, #humanSF-secao5, #humanSF-secao6 {
+    position: relative;
+
+    div.alinhamento {
+        width: fit-content;
+        height: fit-content;
+        position: absolute;
+    }
+
+    h3 {
+        font-size: 4rem;
+    }
+    p {
+        font-size: 1.4rem;
+    }
+}
+// Aqui selecionamos o mixin de acordo com a necessidade. As div ímpares precisam alinhar a caixa com os textos à direita. As div pares precisam alinhar à esquerda.
+#humanSF-secao3, #humanSF-secao5 {
+    div.alinhamento {
+        @include alinhar-direita;
+    }
+}
+#humanSF-secao4, #humanSF-secao6 {
+    div.alinhamento {
+        @include alinhar-esquerda;
+    }
+}

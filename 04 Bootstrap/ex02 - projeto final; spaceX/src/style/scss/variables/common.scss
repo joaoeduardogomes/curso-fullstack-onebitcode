@@ -29,6 +29,15 @@ body {
     text-transform: uppercase;
 }
 
+.seta {
+    max-width: 160px;
+    display: inline-block;
+    margin-left: 45%;
+    margin-top: 4rem;
+
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 p:not(.texto), .botao {
     font-variant: small-caps;
 }
@@ -62,14 +71,16 @@ p:not(.texto), .botao {
     }
 }
 
-.seta {
-    max-width: 160px;
-    display: inline-block;
-    // width: 50%;
-    margin-left: 45%;
-    margin-top: 4rem;
-
-    background-color: rgba(0, 0, 0, 0.1);
+.contato {
+    height: 95vh;
+    div {
+        padding-top: 15rem;
+    }
+    a {
+        color: $cor-copyright;
+        text-decoration: none;
+        border-bottom: 1px solid $cor-copyright;
+    }
 }
 
 .footer {

@@ -25,6 +25,14 @@ body {
   text-transform: uppercase;
 }
 
+.seta {
+  max-width: 160px;
+  display: inline-block;
+  margin-left: 45%;
+  margin-top: 4rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 p:not(.texto), .botao {
   font-variant: small-caps;
 }
@@ -53,12 +61,16 @@ p:not(.texto), .botao {
   background-color: #FAFAFF;
 }
 
-.seta {
-  max-width: 160px;
-  display: inline-block;
-  margin-left: 45%;
-  margin-top: 4rem;
-  background-color: rgba(0, 0, 0, 0.1);
+.contato {
+  height: 95vh;
+}
+.contato div {
+  padding-top: 15rem;
+}
+.contato a {
+  color: #a3a3a3;
+  text-decoration: none;
+  border-bottom: 1px solid #a3a3a3;
 }
 
 .footer {
@@ -220,12 +232,74 @@ td {
   padding: 0.5rem;
 }
 
-#falcon-secao6 div {
-  padding-top: 15rem;
+#humanSF-secao1 {
+  background-image: url("../../img/humanFlight/01.jpg");
 }
-#falcon-secao6 a {
+#humanSF-secao1 div#humanSF-titulo {
+  margin: auto;
+  text-align: center;
+  margin-top: 15%;
+}
+#humanSF-secao1 .seta {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+#humanSF-secao2 p.texto {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: auto;
+  max-width: 700px;
   color: #a3a3a3;
+}
+#humanSF-secao2 p.texto a {
+  color: #FAFAFF;
+  font-size: 1.2rem;
   text-decoration: none;
+  border-bottom: 1px solid #FAFAFF;
+}
+
+#humanSF-secao3 {
+  background-image: url("../../img/humanFlight/02.jpg");
+}
+
+#humanSF-secao4 {
+  background-image: url("../../img/humanFlight/03.jpg");
+}
+
+#humanSF-secao5 {
+  background-image: url("../../img/humanFlight/04.jpg");
+}
+
+#humanSF-secao6 {
+  background-image: url("../../img/humanFlight/05.jpg");
+}
+
+#humanSF-secao3, #humanSF-secao4, #humanSF-secao5, #humanSF-secao6 {
+  position: relative;
+}
+#humanSF-secao3 div.alinhamento, #humanSF-secao4 div.alinhamento, #humanSF-secao5 div.alinhamento, #humanSF-secao6 div.alinhamento {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+}
+#humanSF-secao3 h3, #humanSF-secao4 h3, #humanSF-secao5 h3, #humanSF-secao6 h3 {
+  font-size: 4rem;
+}
+#humanSF-secao3 p, #humanSF-secao4 p, #humanSF-secao5 p, #humanSF-secao6 p {
+  font-size: 1.4rem;
+}
+
+#humanSF-secao3 div.alinhamento, #humanSF-secao5 div.alinhamento {
+  left: 70%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#humanSF-secao4 div.alinhamento, #humanSF-secao6 div.alinhamento {
+  right: 70%;
+  top: 50%;
+  transform: translate(50%, -50%);
 }
 
 /*# sourceMappingURL=style.css.map */
