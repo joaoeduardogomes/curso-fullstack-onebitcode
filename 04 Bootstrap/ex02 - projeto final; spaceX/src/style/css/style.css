@@ -200,4 +200,20 @@ td {
   margin-top: 8rem;
 }
 
+#falcon-secao5 img {
+  max-width: 1920px;
+  height: 100vh;
+  object-fit: fill;
+  object-position: center;
+  margin: auto;
+}
+#falcon-secao5 p.texto {
+  background-color: rgba(0, 0, 0, 0.654);
+  color: #FAFAFF;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+}
+
 /*# sourceMappingURL=style.css.map */

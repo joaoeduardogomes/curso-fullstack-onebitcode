@@ -105,3 +105,21 @@ td {
         margin-top: 8rem;
     }
 }
+
+#falcon-secao5 {
+    img {
+        max-width: 1920px;
+        height: 100vh;
+        object-fit: fill;
+        object-position: center;
+        margin: auto;
+    }
+    p.texto {
+        background-color: $cor-fundo-transparente;
+        color: $cor-texto;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 2rem;
+        padding: 0.5rem;
+    }
+}
