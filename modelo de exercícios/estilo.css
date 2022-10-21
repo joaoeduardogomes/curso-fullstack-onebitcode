@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+body {
+    background-color: #151515;
+    font: normal 15pt Arial;
+    color: white;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    color: #FF0043;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    color: black;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418);
+}
+
+div {
+    text-align: left;
+    padding: 8px;
+}
+
+
+select {
+    display: block;
+    min-width: 150px;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+}
+
+footer >p > span {
+    color: #787878;
+}
