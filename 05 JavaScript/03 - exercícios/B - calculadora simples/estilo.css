@@ -10,7 +10,7 @@ header {
     text-align: center;
 }
 
-header h1 {
+header h1, header h2 {
     color: #FF0043;
 }
 
@@ -29,10 +29,19 @@ div {
     padding: 8px;
 }
 
+div span.dados {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+}
 
-select {
-    display: block;
-    min-width: 150px;
+div span.dados input {
+    max-width: 100px;
+    margin-left: 1rem;
+}
+
+span.n {
+    font-weight: bold;
 }
 
 footer {
