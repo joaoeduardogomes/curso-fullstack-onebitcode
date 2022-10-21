@@ -35,16 +35,21 @@
                     <option value="AGR">Ciências Agrárias</option>
                     <option value="LET">Linguística, Letras e Artes</option>
                     <option value="SOC">Ciências Sociais Aplicadas</option>
-                    <option value="HUM ">Ciências Humanas</option>
+                    <option value="HUM">Ciências Humanas</option>
                 </datalist>
             </span>
 
-            <input type="button" value="Enviar" class="botao">
+            <span class="dados">
+                <label for="inascimento">Data de nascimento: </label>
+                <input type="date" name="nascimento" id="inascimento">
+            </span>
+
+            <input type="button" value="Enviar" class="botao" onclick="enviarDados()">
             <hr>
         </div>
         
-        <div>
-            Saída
+        <div id="saida">
+            
         </div>
 
     </section>
