@@ -29,6 +29,15 @@ div {
     padding: 8px;
 }
 
+div span.dados {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+div span.dados input {
+    max-width: 300px;
+}
 
 select {
     display: block;

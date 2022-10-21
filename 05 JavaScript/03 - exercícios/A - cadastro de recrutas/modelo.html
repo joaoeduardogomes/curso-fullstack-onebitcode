@@ -14,7 +14,33 @@
 
     <section>
         <div>
-            Entrada
+            <span class="dados">
+                <label for="inome">Nome: </label>
+                <input type="text" name="nome" id="inome">
+            </span>
+
+            <span class="dados">
+                <label for="isobrenome">Sobrenome: </label>
+                <input type="text" name="sobrenome" id="isobrenome">
+            </span>
+
+            <span class="dados">
+                <label for="iestudo">Campo de estudo: </label>
+                <input type="text" name="estudo" id="iestudo" list="lstestudo">
+                <datalist id="lstestudo">
+                    <option value="CET">Ciências Exatas e da Terra</option>
+                    <option value="BIO">CIências Biológicas</option>
+                    <option value="ENG">Engenharias</option>
+                    <option value="SAU">Ciências da Saúde</option>
+                    <option value="AGR">Ciências Agrárias</option>
+                    <option value="LET">Linguística, Letras e Artes</option>
+                    <option value="SOC">Ciências Sociais Aplicadas</option>
+                    <option value="HUM ">Ciências Humanas</option>
+                </datalist>
+            </span>
+
+            <input type="button" value="Enviar" class="botao">
+            <hr>
         </div>
         
         <div>
