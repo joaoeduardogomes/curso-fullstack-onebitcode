@@ -4,20 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex título</title>
+    <title>Comparador de Velocidades</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
-        <h1>ex título</h1>
+        <h1>Comparador de Velocidades</h1>
     </header>
 
     <section>
         <div>
-            Entrada
+            <h2>Veículo 1</h2>
+            <span class="dados">
+                <label for="nomeVeiculo1">Nome:</label>
+                <input type="text" name="inomeVeiculo1" id="nomeVeiculo1">
+            </span>
+            <span class="dados">
+                <label for="velocidadeVeiculo1">Velocidade:</label>
+                <input type="number" name="ivelocidadeVeiculo1" id="velocidadeVeiculo1">
+            </span>
+
+            <h2>Veículo 2</h2>
+            <span class="dados">
+                <label for="nomeVeiculo2">Nome:</label>
+                <input type="text" name="inomeVeiculo2" id="nomeVeiculo2">
+            </span>
+            <span class="dados">
+                <label for="velocidadeVeiculo2">Velocidade:</label>
+                <input type="number" name="ivelocidadeVeiculo2" id="velocidadeVeiculo2">
+            </span>
+
+            <input type="button" value="Comparar" onClick="comparar()">
         </div>
-        
+
+        <hr>
         <div>
+
             Saída
         </div>
 

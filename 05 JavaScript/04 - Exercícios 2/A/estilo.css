@@ -27,16 +27,22 @@ section {
 div {
     text-align: left;
     padding: 8px;
+
+    display: table;
 }
 
 div span.dados {
-    display: flex;
-    flex-direction: column;
+    display: table-row;
     margin: 1rem 0;
+}
+
+div span.dados label {
+    display: table-cell;
 }
 
 div span.dados input {
     max-width: 300px;
+    display: table-cell;
 }
 
 select {
