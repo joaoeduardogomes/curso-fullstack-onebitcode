@@ -4,21 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex título</title>
+    <title>Cálculo de Dano</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
-        <h1>ex título</h1>
+        <h1>Cálculo de Dano</h1>
     </header>
 
     <section>
-        <div>
-            Entrada
+        <div id="entrada">
+            <aside id="atacante">
+                <span class="dados">
+                    <label for="nomeAtacante">Nome do atacante: </label>
+                    <input type="text" name="inomeAtacante" id="nomeAtacante">
+                </span>
+                <span class="dados">
+                    <label for="valorAtaque">Poder de ataque: </label>
+                    <input type="number" name="ivalorAtaque" id="valorAtaque">
+                </span>
+            </aside>
+
+            <aside id="divisor"></aside>
+
+            <aside id="defensor">
+                <span class="dados">
+                    <label for="nomeDefensor">Nome do defensor: </label>
+                    <input type="text" name="inomeDefensor" id="nomeDefensor">
+                </span>
+                <span class="dados">
+                    <label for="valorDefesa">Poder de defesa: </label>
+                    <input type="number" name="ivalorDefesa" id="valorDefesa">
+                </span>
+                <span class="dados">
+                    <label for="pv">Pontos de vida: </label>
+                    <input type="number" name="ipv" id="pv">
+                </span>
+                <span>
+                    <label for="escudo">Tem escudo? </label>
+                    <input type="checkbox" name="iescudo" id="escudo">
+                </span>
+            </aside>
+
+            <input type="button" value="Atacar!" id="botao" onclick="atacar()">
         </div>
         
-        <div>
-            Saída
+        <hr>
+        
+        <div id="saida">
+            
         </div>
 
     </section>

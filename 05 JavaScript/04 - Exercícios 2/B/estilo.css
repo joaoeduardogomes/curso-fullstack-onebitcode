@@ -29,6 +29,16 @@ div {
     padding: 8px;
 }
 
+div#entrada {
+    display: flex;
+    justify-content: space-around;
+}
+
+aside#divisor {
+    height: 300px;
+    border-left: 5px solid black;
+}
+
 div span.dados {
     display: flex;
     flex-direction: column;
@@ -37,6 +47,10 @@ div span.dados {
 
 div span.dados input {
     max-width: 300px;
+}
+
+#botao {
+    align-self: flex-end;
 }
 
 select {
