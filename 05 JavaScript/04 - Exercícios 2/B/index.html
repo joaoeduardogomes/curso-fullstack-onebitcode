@@ -13,41 +13,40 @@
     </header>
 
     <section>
-        <div id="entrada">
-            <aside id="atacante">
-                <span class="dados">
-                    <label for="nomeAtacante">Nome do atacante: </label>
-                    <input type="text" name="inomeAtacante" id="nomeAtacante">
-                </span>
-                <span class="dados">
-                    <label for="valorAtaque">Poder de ataque: </label>
-                    <input type="number" name="ivalorAtaque" id="valorAtaque">
-                </span>
-            </aside>
-
-            <aside id="divisor"></aside>
-
-            <aside id="defensor">
-                <span class="dados">
-                    <label for="nomeDefensor">Nome do defensor: </label>
-                    <input type="text" name="inomeDefensor" id="nomeDefensor">
-                </span>
-                <span class="dados">
-                    <label for="valorDefesa">Poder de defesa: </label>
-                    <input type="number" name="ivalorDefesa" id="valorDefesa">
-                </span>
-                <span class="dados">
-                    <label for="pv">Pontos de vida: </label>
-                    <input type="number" name="ipv" id="pv">
-                </span>
-                <span>
-                    <label for="escudo">Tem escudo? </label>
-                    <input type="checkbox" name="iescudo" id="escudo">
-                </span>
-            </aside>
-
-            <input type="button" value="Atacar!" id="botao" onclick="atacar()">
-        </div>
+        <form>
+            <div id="entrada">
+                <aside id="atacante">
+                    <span class="dados">
+                        <label for="nomeAtacante">Nome do atacante: </label>
+                        <input type="text" name="inomeAtacante" id="nomeAtacante" required>
+                    </span>
+                    <span class="dados">
+                        <label for="valorAtaque">Poder de ataque: </label>
+                        <input type="number" name="ivalorAtaque" id="valorAtaque" required>
+                    </span>
+                </aside>
+                <aside id="divisor"></aside>
+                <aside id="defensor">
+                    <span class="dados">
+                        <label for="nomeDefensor">Nome do defensor: </label>
+                        <input type="text" name="inomeDefensor" id="nomeDefensor" required>
+                    </span>
+                    <span class="dados">
+                        <label for="valorDefesa">Poder de defesa: </label>
+                        <input type="number" name="ivalorDefesa" id="valorDefesa" required>
+                    </span>
+                    <span class="dados">
+                        <label for="pv">Pontos de vida: </label>
+                        <input type="number" name="ipv" id="pv" required>
+                    </span>
+                    <span>
+                        <label for="escudo">Tem escudo? </label>
+                        <input type="checkbox" name="iescudo" id="escudo">
+                    </span>
+                </aside>
+                <input type="submit" value="Atacar!" id="botao" onclick="atacar()">
+            </div>
+        </form>
         
         <hr>
         
