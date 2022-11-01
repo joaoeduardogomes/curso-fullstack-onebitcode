@@ -25,11 +25,21 @@ function comparar() {
     }
 
 
-    // Criação de elementos:
+    // Capturando a div de exibição do resultado:
     let res = document.getElementById('saida');
 
     // Exibição do resultado:
-    res.innerHTML = `
-    O veículo mais rápido se chama ${maior.nome}, com uma velocidade de ${maior.velocidade} Km/h. <br>
-    Ele está ${(maior.velocidade - menor.velocidade).toFixed(2)} Km/h mais rápido do que o veículo chamado ${menor.nome}, que tem uma velocidade de ${menor.velocidade} Km/h.`
+    if (maior.velocidade === menor.velocidade) {
+        res.textContent = "Ambos os veículos têm a mesma velocidade.";
+    }
+    else {
+        res.innerHTML = `
+        <p>
+            O veículo mais rápido se chama ${maior.nome}, com uma velocidade de ${maior.velocidade} Km/h. 
+        </p>
+        <p>
+            Ele está ${(maior.velocidade - menor.velocidade).toFixed(2)} Km/h mais rápido do que o veículo chamado ${menor.nome}, que tem uma velocidade de ${menor.velocidade} Km/h.
+        </p>`
+    }
+    
 }
