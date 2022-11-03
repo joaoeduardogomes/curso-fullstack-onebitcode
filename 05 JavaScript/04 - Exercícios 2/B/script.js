@@ -49,6 +49,9 @@ function atacar() {
         res.textContent = `${defensor.nome} tem um escudo. Logo, o dano foi reduzido pela metade.`
     }
 
+    // Arredondando o dano pra cima:
+    dano = Math.ceil(dano);
+
     // Redução dos pontos de vida (PV):
     defensor.pv -= dano;
     if (defensor.pv < 0) {
