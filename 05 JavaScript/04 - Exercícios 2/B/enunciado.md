@@ -7,3 +7,5 @@ Escreva um programa que permita inserir o nome e o poder de ataque de um persona
 - Se o poder de ataque for menor ou igual a defesa, o dano causado será 0.
 
 Por fim, o programa deve subtrair a quantidade de dano da quantidade de pontos de vida do personagem defensor e exibir na tela a quantidade de dano e as informações atualizadas de ambos os personagens.
+
+*Usar if-else*

@@ -12,3 +12,5 @@ Escreva um programa em javascript que funcione como um conversos de medidas. O p
 O programa deve então converter a medida de acordo com a opção escolhida e exibir o resultado.
 
 O programa também deve exibir uma mensagem de “Opção inválida” caso o usuário insira uma opção diferente das disponíveis (use o break e o default para isso)
+
+*Usar switch-case*
