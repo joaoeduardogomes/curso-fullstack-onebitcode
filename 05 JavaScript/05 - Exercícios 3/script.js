@@ -6,6 +6,7 @@ function converter() {
     
     const metros = Number(document.getElementById('metros').value);
 
+    /*
     const medidas = {
         mm: metros * 1000,
         cm: metros * 100,
@@ -14,4 +15,9 @@ function converter() {
         hm: metros * 0.01,
         km: metros * 0.001
     }
+    */
+    let medida = getElementById('medida').value;
+    console.log(medida);
+
+    //switch ()
 }
