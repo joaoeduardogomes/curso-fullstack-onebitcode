@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medidas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Conversor de medidas</h1>
+    </header>
+
+    <section>
+        <div>
+            <form>
+                <label for="metros">Informe um valor em metros: </label>
+                <input type="number" name="imetros" id="metros" required>
+
+                <label for="medida">Converter para: </label>
+                <select name="imedida" id="medida">
+                    <option value="todos" selected style="background-color: rgba(160, 157, 157, 0.637)">Todas as opções</option>
+                    <option value="mm">Milímetro(s)</option>
+                    <option value="cm">Centímetro(s)</option>
+                    <option value="dm">Decímetro(s)</option>
+                    <option value="dam">Decâmetro(s)</option>
+                    <option value="hm">Hectômetro(s)</option>
+                    <option value="km">Quilômetro(s)</option>
+                </select>
+
+                <input type="submit" value="Converter" id="botao" onclick="converter()">
+            </form>
+        </div>
+
+        <hr>
+        
+        <div>
+            Saída
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; Curso Fullstack OBC — <span>João</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
