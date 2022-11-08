@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitando Novas Cidades</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body onload="cidadesVisitadas()">
+    <header>
+        <h1>Visitando Novas Cidades</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Conte quais das seguintes cidades você já visitou.</p>
+
+            <div id="perguntaCidades">
+                <p>Você já visitou <span id="icidade"></span> ?</p>
+                <span id="botoes">
+                    <button value="sim" class="botao botao-sim" onclick="adicionar()">Sim</button>
+                    <button value="nao" class="botao botao-nao" onclick="cidadesVisitadas()">Não</button>
+                </span>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <div id="saida">
+            <ul id="lista">
+                
+            </ul>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; Curso Fullstack OBC — <span>João</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
