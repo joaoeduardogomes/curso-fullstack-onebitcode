@@ -1,5 +1,7 @@
 const listaCidades = ["Brasília", "São Paulo", "Rio de Janeiro", "Salvador", "Belo Horizonte", "Fortaleza", "Curitiba", "Manaus", "Recife", "Porto Alegre", "Florianópolis", "Gramado"];
 
+const totalCidades = listaCidades.length;
+
 let visitadas = [];
 
 let perguntadas = [];
@@ -28,18 +30,9 @@ function cidadesVisitadas() {
         perguntadas.push(cidade);
     }   
     
-    
-        console.log(cidade);
-        console.log(visitadas);
-        console.log(perguntadas);
-    
-        
-        console.log(listaCidades.length);
-        console.log(perguntadas.length);
-        console.log(visitadas.length);
 
     //Finalizando o programa:
-    if (perguntadas.length === 13) {
+    if (perguntadas.length === totalCidades + 1) {
         alert("Todas as cidades foram apresentadas");
         mostrar.textContent = "Quantas cidades";
         exibir();
