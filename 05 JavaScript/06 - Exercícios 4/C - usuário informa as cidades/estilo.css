@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+body {
+    background-color: #151515;
+    font: normal 15pt Arial;
+    color: white;
+    line-height: 1.8rem;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    color: #FF0043;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    color: black;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418);
+}
+
+div {
+    text-align: left;
+    padding: 8px;
+}
+
+div span.dados {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0;
+}
+
+div span.dados input {
+    max-width: 100px;
+}
+
+#perguntaCidades {
+    background-color: #05668d63;
+    border: 4px solid #05668D;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+#nomeCidade {
+    background-color: #151515;
+    color: #FF0043;
+    padding: 0.4rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.219);
+    font-weight: bold;
+    margin-top: 0.4rem;
+    height: 1.8rem;
+    width: 50%;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#botoes {
+    display: block;
+    margin: auto;
+}
+
+.botao {
+    transition: all 0.3s ease-in-out;
+}
+
+
+.escondido {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+}
+
+footer >p > span {
+    color: #787878;
+}
