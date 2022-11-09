@@ -1,5 +1,3 @@
-let item;
-
 function finalizar() {
     let opcoes = document.getElementById('opcoes');
     opcoes.style.display = 'none';
@@ -19,13 +17,13 @@ function verificar() {
     for (let i = 0; i < escolha.length; i++) {
         escolha[i].addEventListener("click", function () {
 			console.log(escolha[i].value);
-            item = escolha[i].value;
-            exibir();
+            let item = escolha[i].value;
+            exibir(item);
         });
     }
 }
 
-function exibir() {
+function exibir(item) {
     const exibicao = document.getElementById('saida');
     exibicao.textContent = `Você escolheu: ${item}`
 
