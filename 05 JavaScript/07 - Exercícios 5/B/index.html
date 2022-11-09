@@ -10,7 +10,7 @@
     
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body>
+<body onload="exibir()">
     <header>
         <h1>Controle Financeiro</h1>
     </header>
@@ -20,18 +20,18 @@
             <span>
                 <label for="valorInicial">Informe o valor inicial: R$ </label>
                 <input type="number" name="ivalorInicial" id="valorInicial" min="1" step="any">
-                <button class="btn btn-primary d-block mt-3 mb-4" onclick="exibirCalculos()">Iniciar simulações</button>
+                <button class="btn btn-primary d-block mt-3 mb-4" onclick="guardarValorInicial()">Iniciar simulações</button>
             </span>
 
             <aside id="calculos" class="escondido">
-                <p class="mb-3">
+                <p class="mb-3 input-group">
                     <input type="number" name="isomar" id="somar" min="1" step="any">
-                    <button class="btn btn-success">Somar</button>
+                    <button class="btn btn-success" onclick="somar()">Somar</button>
                 </p>
                 
-                <p class="mt-3 mb-4">
+                <p class="mt-3 mb-4 input-group">
                     <input type="number" name="isubtrair" id="subtrair" min="1" step="any">
-                    <button class="btn btn-danger">Subtrair</button>
+                    <button class="btn btn-danger" onclick="subtrair()">Subtrair</button>
                 </p>
 
                 <button class="btn btn-secondary" onclick="encerrar()">Encerrar</button>
