@@ -15,12 +15,14 @@
     <section>
         <div>
             <label for="num">Número: </label>
-            <input type="number" name="inum" id="num">
-            <button class="botao">Calcular</button>
+            <input type="number" name="inum" id="num" onfocus="this.value=''">
+            <button class="botao" onclick="tabuada()">Calcular</button>
         </div>
         
         <div>
-            Saída
+            <select name="tabuada" id="seltab" size="20">
+                <option>Informe um número acima.</option>
+            </select>
         </div>
 
     </section>
