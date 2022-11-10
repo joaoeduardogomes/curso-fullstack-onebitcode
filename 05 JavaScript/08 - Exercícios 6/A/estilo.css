@@ -4,6 +4,7 @@ body {
     background-color: #151515;
     font: normal 15pt Arial;
     color: white;
+    box-sizing: border-box;
 }
 
 header {
@@ -29,14 +30,24 @@ div {
     padding: 8px;
 }
 
-div span.dados {
-    display: flex;
-    flex-direction: column;
-    margin: 1rem 0;
+.botao {
+    background-color: #151515;
+    color: #FF0043;
+    width: 20%;
+    height: fit-content;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.233);
+    transition: all 0.3s ease-in-out;
 }
-
-div span.dados input {
-    max-width: 300px;
+.botao:hover {
+    cursor: pointer;
+    background-color: #FF0043;
+    color: #151515;
+    border-color: #151515;
 }
 
 select {
