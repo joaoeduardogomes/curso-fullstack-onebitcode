@@ -15,7 +15,7 @@
     <section>
         <div id="entrada">
             <label for="palavra">Informe uma palavra ou frase para verificarmos se ela é um palíndromo:</label>
-            <input type="text" name="ipalavra" id="palavra" onfocus="this.value=''">
+            <input type="text" name="ipalavra" id="palavra" onfocus="this.value=''" onclick="limparExibicao()">
 
             <button class="botao" onclick="palindromo()">Verificar</button>
         </div>
@@ -23,7 +23,7 @@
         <hr>
         
         <div id="saida">
-            Saída
+            
         </div>
 
     </section>

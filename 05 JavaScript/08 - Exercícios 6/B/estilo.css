@@ -69,6 +69,16 @@ div#entrada input {
     border-color: #FF0043;
 }
 
+.sucesso {
+    color: green;
+    font-weight: bold;
+}
+
+.falha {
+    color: red;
+    font-weight: bold;
+}
+
 footer {
     text-align: center;
     font-style: italic;
