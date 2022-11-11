@@ -34,34 +34,6 @@ div {
     display: none;
 }
 
-/* .botao {
-    background-color: #151515;
-    color: #FF0043;
-    width: 50%;
-    height: fit-content;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.233);
-}
-
-.botao:last-of-type {
-    background-color: #FF0043;
-    color: #151515;
-}
-
-.botao, .botao:last-of-type {
-    transition: all 0.4s ease-in-out;
-}
-
-.botao:hover, .botao:last-of-type:hover {
-    cursor: pointer;
-    background-color: white;
-    border: 2px solid #787878;
-} */
-
 
 footer {
     text-align: center;
