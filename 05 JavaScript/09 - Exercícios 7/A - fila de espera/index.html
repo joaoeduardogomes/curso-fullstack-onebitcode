@@ -14,11 +14,17 @@
 
     <section>
         <div>
-            Entrada
+            <label for="paciente">Novo Paciente: </label>
+            <input type="text" name="ipaciente" id="paciente">
+            <button class="botao" onclick="adicionarPaciente()">Adicionar</button>
         </div>
+        <hr>
         
-        <div>
-            Saída
+        <div id="saida" class="!escondido">
+            <span id="campoLista">
+                <select name="ilsta" id="lista" size="10"></select>
+            </span>
+            <span id="campoMensagem"></span>
         </div>
 
     </section>

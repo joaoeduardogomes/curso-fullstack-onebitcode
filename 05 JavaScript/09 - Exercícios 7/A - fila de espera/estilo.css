@@ -44,6 +44,33 @@ select {
     min-width: 150px;
 }
 
+.botao {
+    color: #FF0043;
+    background-color: #151515;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.233);
+    transition: all 0.3s ease-in-out;
+
+    display: block;
+    margin: 0.8rem auto;
+}
+.botao:hover {
+    cursor: pointer;
+    color: #151515;
+    background-color: #FF0043;
+    border-color: #151515;
+}
+
+.escondido {
+    display: none;
+}
+
 footer {
     text-align: center;
     font-style: italic;
