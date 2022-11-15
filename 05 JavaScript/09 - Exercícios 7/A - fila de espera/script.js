@@ -6,12 +6,13 @@ const mensagem = document.getElementById('campoMensagem');
 
 
 function adicionarPaciente() {
-    const paciente = document.getElementById('paciente').value;
+    const paciente = toTitleCase(document.getElementById('paciente').value);
 
     if (paciente.length === 0) {
         alert("Informe o nome do paciente.");
         return;
     }
+
     
     listaPacientes.push(paciente);
     
@@ -76,4 +77,12 @@ function mensagemRemover() {
 
 function encerrar() {
     location.reload();
+}
+
+
+
+function toTitleCase(str) {
+    return str.toLowerCase().split(' ').map(function (word) {
+        return (word.charAt(0).toUpperCase() + word.slice(1));
+    }).join(' ');
 }
