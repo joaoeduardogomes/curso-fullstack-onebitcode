@@ -71,6 +71,27 @@ select {
     display: none;
 }
 
+#area1 {
+    display: flex;
+    gap: 2.5rem;
+}
+#campoMensagem {
+    width: 100%;
+}
+
+.aviso-add, .aviso-remove {
+    padding: 0.6rem;
+    border-radius: 15px;
+}
+.aviso-add {
+    color: #395144;
+    background-color: #f0ebcea9;
+}
+.aviso-remove {
+    color: #DC3535;
+    background-color: #fcdeb09d;
+}
+
 footer {
     text-align: center;
     font-style: italic;

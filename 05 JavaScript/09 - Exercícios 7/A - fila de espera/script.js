@@ -1,4 +1,9 @@
+// criando a lista de pacientes:
 const listaPacientes = [];
+
+//Capturando o campo de exibição de mensagens:
+const mensagem = document.getElementById('campoMensagem');
+
 
 function adicionarPaciente() {
     const paciente = document.getElementById('paciente').value;
@@ -12,6 +17,15 @@ function adicionarPaciente() {
     
     console.log(paciente);
     console.log(listaPacientes);
+
+    exibirResultado();
+    mensagemAdicionar();
+}
+
+function removerPaciente() {
+    mensagemRemover();
+
+    listaPacientes.shift();
 
     exibirResultado();
 }
@@ -30,14 +44,36 @@ function exibirResultado() {
         item.textContent = `${i + 1}) ${listaPacientes[i]}`;
         item.value = `pos${i}`;
         selectLista.appendChild(item);
-    }
-
-    // Mostrar mensagem do lado:
-    const mensagem = document.getElementById('campoMensagem');
+    } 
     /* Falta:
     Adicionar mensagem
     Adicionar botão de atender próximo cliente
     Adicionar botão de encerrar atendimento
     */ 
     
+}
+
+// Notificações da ação executada:
+function mensagemAdicionar() {
+    // Mostrar mensagem do lado:
+    mensagem.innerHTML = `
+    <p class="aviso-add">
+    Paciente ${listaPacientes.at(-1)} adicionado(a) com sucesso à fila de atendimento.
+    </p>
+    `;
+    // Usei ".at(-1)"" porque o [-1] dava undefined.
+    setTimeout(() => {  mensagem.innerHTML = ""; }, 4000);
+}
+function mensagemRemover() {
+    // Mostrar mensagem do lado:
+    mensagem.innerHTML = `
+    <p class="aviso-remove">
+    Paciente ${listaPacientes.at(0)} atendido(a).
+    </p>
+    `;
+    setTimeout(() => {  mensagem.innerHTML = ""; }, 4000);
+}
+
+function encerrar() {
+    location.reload();
 }
