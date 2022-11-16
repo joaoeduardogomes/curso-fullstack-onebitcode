@@ -16,6 +16,20 @@ function adicionar () {
     exibirCarta("Carta adicionada:");
 }
 
+function remover() {
+    if (baralho.length === 0) {
+        alert("[ERRO] — O baralho está vazio!");
+        return;
+    }
+    
+    exibirCarta("Carta removida:")
+    
+    baralho.shift();
+
+    exibirBaralho();
+}
+
+
 function exibirBaralho() {
     const listagemCartas = document.getElementById('listagemCartas');
     listagemCartas.innerHTML = "";
@@ -53,7 +67,7 @@ function exibirCarta(msg) {
     areaImg.appendChild(imgCarta);
 }
 
-function urlImagemCarta() {
+function urlImagemCarta() {   
     let urlImagem;
     let altImagem;
 
