@@ -40,6 +40,9 @@ function exibirBaralho() {
         item.value = baralho[i];
         listagemCartas.appendChild(item);
     }
+
+    const numCartas = document.getElementById("numCartas");
+    numCartas.textContent = `Qtd de cartas: ${baralho.length}`;
 }
 
 function exibirCarta(msg) {
