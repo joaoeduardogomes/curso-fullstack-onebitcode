@@ -45,13 +45,7 @@ function exibirResultado() {
         item.textContent = `${i + 1}) ${listaPacientes[i]}`;
         item.value = `pos${i}`;
         selectLista.appendChild(item);
-    } 
-    /* Falta:
-    Adicionar mensagem
-    Adicionar botão de atender próximo cliente
-    Adicionar botão de encerrar atendimento
-    */ 
-    
+    }     
 }
 
 // Notificações da ação executada:

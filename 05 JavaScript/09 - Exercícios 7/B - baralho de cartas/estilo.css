@@ -31,8 +31,9 @@ div {
 
 div span.dados {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 1rem 0;
+    gap: 2rem;
 }
 
 div span.dados input {
@@ -42,6 +43,46 @@ div span.dados input {
 select {
     display: block;
     min-width: 150px;
+}
+
+#naipe > optgroup > option:nth-child(even) {
+    color: red;
+}
+
+.botao {
+    color: #FF0043;
+    background-color: #151515;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.233);
+    transition: all 0.3s ease-in-out;
+
+    display: block;
+    margin: 0.8rem auto;
+}
+.botao:hover {
+    cursor: pointer;
+    color: #151515;
+    background-color: #FF0043;
+    border-color: #151515;
+}
+
+#saida {
+    display: flex;
+    justify-content: space-around;
+}
+
+#saida #areaCarta {
+    max-width: 50%;
+}
+
+#saida #imagemCarta {
+    height: calc(242rem/16);
 }
 
 footer {

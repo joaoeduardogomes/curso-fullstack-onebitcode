@@ -4,21 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex título</title>
+    <title>Pilha de Cartas</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
-        <h1>ex título</h1>
+        <h1>Pilha de Cartas</h1>
     </header>
 
     <section>
         <div>
-            Entrada
+            <p>Selecione o valor e o naipe a serem adicionados no baralho:</p>
+
+            <span class="dados">
+                <select name="ivalor" id="valor">
+                    <option value="" selected>Escolha um valor</option>
+                    <optgroup label="Valores:">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="J">J</option>
+                        <option value="Q">Q</option>
+                        <option value="K">K</option>
+                    </optgroup>
+                </select>
+
+                <select name="inaipe" id="naipe">
+                    <option value="" selected>Escolha um naipe</option>
+                    <optgroup label="Naipes:">
+                        <option value="♣">♣</option>
+                        <option value="♦">♦</option>
+                        <option value="♠">♠</option>
+                        <option value="♥">♥</option>
+                    </optgroup>
+                </select>
+            </span>
+
+            <button class="botao" onclick="adicionar()">Adicionar ao baralho</button>
         </div>
+
+        <hr>
         
-        <div>
-            Saída
+        <div id="saida">
+            <span>
+                <label for="listagemCartas">Cartas no baralho:</label>
+                <select name="ilistagemCartas" id="listagemCartas" size="13"></select>
+            </span>
+            <span id="areaCarta">
+                
+            </span>
         </div>
 
     </section>
