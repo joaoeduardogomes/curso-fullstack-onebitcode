@@ -20,7 +20,7 @@
                 <button class="botao">Ver imóveis cadastrados</button>
             </div>
 
-            <form class="!escondido">
+            <div class="!escondido">
                 <p>
                     <label for="nome">Nome do proprietário: </label>
                     <input type="text" name="inome" id="nome" required>
@@ -41,19 +41,19 @@
                         <legend>Com garagem?</legend>
 
                         <span>
-                            <input type="radio" name="garagem" id="garagem-s">
+                            <input type="radio" name="garagem" id="garagem-s" value="sim">
                             <label for="garagem-s">Sim</label>
                         </span>
 
                         <span>
-                            <input type="radio" name="garagem" id="garagem-n" checked>
+                            <input type="radio" name="garagem" id="garagem-n" value="nao" checked>
                             <label for="garagem-n">Não</label>
                         </span>
                     </fieldset>
                 </p>
 
-                <button class="btn btn-primary botao">Salvar</button>
-            </form>
+                <button class="btn btn-primary botao" onclick="salvarImovel()">Salvar</button>
+            </div>
 
             <!-- <button class="botao">Finalizar</button> -->
         </div>

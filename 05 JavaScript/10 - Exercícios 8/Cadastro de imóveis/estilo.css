@@ -45,6 +45,8 @@ div p input {
 }
 
 fieldset {
+    max-width: 350px;
+    margin: auto;
     display: flex;
     justify-content: space-around;
 }
