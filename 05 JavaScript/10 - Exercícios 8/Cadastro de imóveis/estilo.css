@@ -52,8 +52,7 @@ fieldset {
 }
 
 .botao {
-    color: #FF0043;
-    background-color: #151515;
+    color: #151515;
     width: fit-content;
     height: fit-content;
     padding: 0.5rem;
@@ -72,6 +71,24 @@ fieldset {
     color: #151515;
     background-color: #FF0043;
     border-color: #151515;
+}
+button#cadastrar {
+    background-color: #82bcec;
+}
+button#cadastrar:hover {
+    background-color: #89d4eb;
+}
+button#exibir {
+    background-color: #D8973C;
+}
+button#exibir:hover {
+    background-color: #f0cd9d;
+}
+button#salvar {
+    background-color: #FFD400;
+}
+button#salvar:hover {
+    background-color: #f1de7b;
 }
 
 #mensagem {

@@ -16,8 +16,8 @@
     <section>
         <div>
             <div class="dados">
-                <button class="botao" onclick="exibirFormulario()">Cadastrar imóvel</button>
-                <button class="botao" onclick="exibirImoveis()">Ver imóveis cadastrados</button>
+                <button id="cadastrar" class="botao" onclick="exibirFormulario()">Cadastrar imóvel</button>
+                <button id="exibir" class="botao" onclick="exibirImoveis()">Ver imóveis cadastrados</button>
             </div>
 
             <div id="formulario" class="escondido">
@@ -52,7 +52,7 @@
                     </fieldset>
                 </p>
 
-                <button class="btn btn-primary botao" onclick="salvarImovel()">Salvar</button>
+                <button id="salvar" class="btn btn-primary botao" onclick="salvarImovel()">Salvar</button>
             </div>
 
             <p id="mensagem" class="escondido"></p>
