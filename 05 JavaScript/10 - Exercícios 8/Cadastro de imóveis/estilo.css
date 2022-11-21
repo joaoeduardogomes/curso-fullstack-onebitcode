@@ -74,6 +74,15 @@ fieldset {
     border-color: #151515;
 }
 
+#mensagem {
+    font-size: 1rem;
+    text-align: center;
+    background-color: rgba(178, 229, 155, 0.658);
+    color: rgb(5, 87, 5);
+    padding: 0.5rem;
+    border-radius: 15px;
+}
+
 .escondido {
     display: none;
 }
@@ -85,6 +94,17 @@ div#saida > #qtd-imoveis {
 div#saida > p {
     text-align: left;
 }
+
+/* Inserido via JS: */
+caption { 
+    background-color: #151515;
+    color:white;
+    width: 30rem;
+    padding: 0.3rem;
+    border-radius: 15px;
+    font-weight: 700;
+}
+
 
 footer {
     text-align: center;

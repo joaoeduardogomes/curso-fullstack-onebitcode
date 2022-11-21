@@ -1,26 +1,29 @@
 const imoveis = [];
-let formulario = document.getElementById('formulario');
+
+// Abre o formulário pra preenchimento com os dados do imóvel:
+function exibirFormulario() {
+    const formulario = document.getElementById('formulario');
+    formulario.classList.remove('escondido');
+}
 
 // Capturar inputs e salvar imóvel na lista de imóveis:
 function salvarImovel() {
     const imovel = {
-        nomeProprietario: toTitleCase(document.getElementById('nome').value),
-        qtdQuartos: document.getElementById('qtd-quartos').value,
-        qtdBanheiros: document.getElementById('qtd-banheiros').value,
-        temGaragem: valorRadio()
+        Proprietario: toTitleCase(document.getElementById('nome').value),
+        Quartos: document.getElementById('qtd-quartos').value,
+        Banheiros: document.getElementById('qtd-banheiros').value,
+        Garagem: valorRadio()
     };
 
     // Verificando se todos os dados foram preenchidos:
-    if ((imovel.nomeProprietario.length === 0) || (imovel.qtdQuartos.length === 0) || (imovel.qtdBanheiros.length === 0)) {
+    if ((imovel.Proprietario.length === 0) || (imovel.Quartos.length === 0) || (imovel.Banheiros.length === 0)) {
         alert("Preencha todos os campos!");
         return;
     }
 
-    imoveis.push(imovel);
+    mensagemSucesso(imovel);
 
-    console.log(imovel);
-    console.log(imoveis);
-    imoveis.forEach(item => console.log(item));
+    imoveis.push(imovel);
 }
 
 // Verificar qual das opções foram escolhidas (radio de garagem -> s/n):
@@ -39,15 +42,22 @@ function exibirImoveis() {
     const qtdImoveis = document.getElementById('qtd-imoveis');
     qtdImoveis.textContent = `Quantidade de imóveis cadastrados: ${imoveis.length}.`;
     
-    const saida = document.getElementById('saida');
+    // Se não tiver nenhum imóvel cadastrado, não vai exibir o título sem aparecer nada embaixo:
+    if (imoveis.length === 0) {
+        return;
+    }
 
-    const saidaImoveis = document.createElement('p');
-    saida.appendChild(saidaImoveis);
+    const saidaImoveis = document.getElementById('tabela');
+    saidaImoveis.innerHTML = "<caption> Imóveis cadastrados: </caption>"
 
     for (let i = 0; i < imoveis.length; i++) {
         for (const item in imoveis[i]) {
-            saidaImoveis.innerText += `${item}: ${imoveis[i][item]} \n`;
+            saidaImoveis.innerHTML += `<tr> 
+                <th>${item}: </th> 
+                <td>${imoveis[i][item]}</td> 
+            </tr>`;
         }
+        saidaImoveis.innerHTML += "<br>"
     }
     
     /*
@@ -59,6 +69,16 @@ function exibirImoveis() {
     */
 }
 
+function mensagemSucesso(imovel) {
+    esteImovel = imovel;
+    const mensagem = document.getElementById('mensagem');
+    mensagem.classList.remove('escondido');
+    mensagem.innerText = `Imóvel de ${esteImovel.Proprietario} cadastrado com sucesso!`;
+
+    setTimeout(() => {  mensagem.innerText = ""; 
+    mensagem.classList.add('escondido');}, 3000);
+    
+}
 
 // Função auxiliar:
 function toTitleCase(str) {

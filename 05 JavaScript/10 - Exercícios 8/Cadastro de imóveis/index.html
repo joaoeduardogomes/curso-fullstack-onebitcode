@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="estilo.css">
 
 </head>
-<body>
+<body onload="exibirImoveis()">
     <header>
         <h1>Cadastro de Imóveis</h1>
     </header>
@@ -16,14 +16,14 @@
     <section>
         <div>
             <div class="dados">
-                <button class="botao">Cadastrar imóvel</button>
+                <button class="botao" onclick="exibirFormulario()">Cadastrar imóvel</button>
                 <button class="botao" onclick="exibirImoveis()">Ver imóveis cadastrados</button>
             </div>
 
-            <div id="formulario" class="!escondido">
+            <div id="formulario" class="escondido">
                 <p>
                     <label for="nome">Nome do proprietário: </label>
-                    <input type="text" name="inome" id="nome" required>
+                    <input type="text" name="inome" id="nome" onfocus="this.value=''" required>
                 </p>
 
                 <p>
@@ -46,7 +46,7 @@
                         </span>
 
                         <span>
-                            <input type="radio" name="garagem" id="garagem-n" value="nao" checked>
+                            <input type="radio" name="garagem" id="garagem-n" value="não" checked>
                             <label for="garagem-n">Não</label>
                         </span>
                     </fieldset>
@@ -55,7 +55,7 @@
                 <button class="btn btn-primary botao" onclick="salvarImovel()">Salvar</button>
             </div>
 
-            <!-- <button class="botao">Finalizar</button> -->
+            <p id="mensagem" class="escondido"></p>
         </div>
 
         <hr>
