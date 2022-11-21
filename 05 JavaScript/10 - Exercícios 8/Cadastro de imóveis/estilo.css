@@ -82,6 +82,10 @@ div#saida > #qtd-imoveis {
     text-align: left;
 }
 
+div#saida > p {
+    text-align: left;
+}
+
 footer {
     text-align: center;
     font-style: italic;

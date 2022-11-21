@@ -17,10 +17,10 @@
         <div>
             <div class="dados">
                 <button class="botao">Cadastrar imóvel</button>
-                <button class="botao">Ver imóveis cadastrados</button>
+                <button class="botao" onclick="exibirImoveis()">Ver imóveis cadastrados</button>
             </div>
 
-            <div class="!escondido">
+            <div id="formulario" class="!escondido">
                 <p>
                     <label for="nome">Nome do proprietário: </label>
                     <input type="text" name="inome" id="nome" required>
@@ -61,7 +61,10 @@
         <hr>
         
         <div id="saida">
-            <p id="qtd-imoveis">Quantidade de imóveis cadastrados: .</p>
+            <p id="qtd-imoveis"></p>
+            <table id="tabela">
+
+            </table>
         </div>
 
     </section>
