@@ -4,21 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex título</title>
+    <title>Cadastro de Imóveis</title>
     <link rel="stylesheet" href="estilo.css">
+
 </head>
 <body>
     <header>
-        <h1>ex título</h1>
+        <h1>Cadastro de Imóveis</h1>
     </header>
 
     <section>
         <div>
-            Entrada
+            <div class="dados">
+                <button class="botao">Cadastrar imóvel</button>
+                <button class="botao">Ver imóveis cadastrados</button>
+            </div>
+
+            <form class="!escondido">
+                <p>
+                    <label for="nome">Nome do proprietário: </label>
+                    <input type="text" name="inome" id="nome" required>
+                </p>
+
+                <p>
+                    <label for="qtd-quartos">Quantidade de quartos: </label>
+                    <input type="number" name="iqtd-quartos" id="qtd-quartos" required>
+                </p>
+
+                <p>
+                    <label for="qtd-banheiros">Quantidade de banheiros</label>
+                    <input type="number" name="iqtd-banheiros" id="qtd-banheiros" required>
+                </p>
+
+                <p>
+                    <fieldset>
+                        <legend>Com garagem?</legend>
+
+                        <span>
+                            <input type="radio" name="garagem" id="garagem-s">
+                            <label for="garagem-s">Sim</label>
+                        </span>
+
+                        <span>
+                            <input type="radio" name="garagem" id="garagem-n" checked>
+                            <label for="garagem-n">Não</label>
+                        </span>
+                    </fieldset>
+                </p>
+
+                <button class="btn btn-primary botao">Salvar</button>
+            </form>
+
+            <!-- <button class="botao">Finalizar</button> -->
         </div>
+
+        <hr>
         
-        <div>
-            Saída
+        <div id="saida">
+            <p id="qtd-imoveis">Quantidade de imóveis cadastrados: .</p>
         </div>
 
     </section>
@@ -26,6 +69,8 @@
     <footer>
         <p>&copy; Curso Fullstack OBC — <span>João</span></p>
     </footer>
+
+
 
     <script src="script.js"></script>
 </body>

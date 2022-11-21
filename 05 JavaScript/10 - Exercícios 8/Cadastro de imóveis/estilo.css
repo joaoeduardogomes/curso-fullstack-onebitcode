@@ -29,19 +29,55 @@ div {
     padding: 8px;
 }
 
-div span.dados {
+div div.dados {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 1rem 0;
 }
 
-div span.dados input {
+div p {
+    text-align: right;
+    margin-right: 3rem;
+}
+
+div p input {
     max-width: 300px;
 }
 
-select {
+fieldset {
+    display: flex;
+    justify-content: space-around;
+}
+
+.botao {
+    color: #FF0043;
+    background-color: #151515;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.233);
+    transition: all 0.3s ease-in-out;
+
     display: block;
-    min-width: 150px;
+    margin: 0.8rem auto;
+}
+.botao:hover {
+    cursor: pointer;
+    color: #151515;
+    background-color: #FF0043;
+    border-color: #151515;
+}
+
+.escondido {
+    display: none;
+}
+
+div#saida > #qtd-imoveis {
+    text-align: left;
 }
 
 footer {
