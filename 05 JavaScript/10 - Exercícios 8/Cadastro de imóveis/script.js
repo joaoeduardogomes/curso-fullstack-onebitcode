@@ -9,14 +9,14 @@ function exibirFormulario() {
 // Capturar inputs e salvar imóvel na lista de imóveis:
 function salvarImovel() {
     const imovel = {
-        Proprietario: toTitleCase(document.getElementById('nome').value),
-        Quartos: document.getElementById('qtd-quartos').value,
-        Banheiros: document.getElementById('qtd-banheiros').value,
-        Garagem: valorRadio()
+        proprietario: toTitleCase(document.getElementById('nome').value),
+        quartos: document.getElementById('qtd-quartos').value,
+        banheiros: document.getElementById('qtd-banheiros').value,
+        garagem: valorRadio()
     };
 
     // Verificando se todos os dados foram preenchidos:
-    if ((imovel.Proprietario.length === 0) || (imovel.Quartos.length === 0) || (imovel.Banheiros.length === 0)) {
+    if ((imovel.proprietario.length === 0) || (imovel.quartos.length === 0) || (imovel.banheiros.length === 0)) {
         alert("Preencha todos os campos!");
         return;
     }
@@ -24,6 +24,8 @@ function salvarImovel() {
     mensagemSucesso(imovel);
 
     imoveis.push(imovel);
+
+    contarImoveis();
 }
 
 // Verificar qual das opções foram escolhidas (radio de garagem -> s/n):
@@ -37,11 +39,15 @@ function valorRadio() {
     }
 }
 
-// Exibir imóveis cadastrados:
-function exibirImoveis() {
+//Contagem de imóveis:
+function contarImoveis() {
     const qtdImoveis = document.getElementById('qtd-imoveis');
     qtdImoveis.textContent = `Quantidade de imóveis cadastrados: ${imoveis.length}.`;
-    
+}
+
+// Exibir imóveis cadastrados:
+function exibirImoveis() {   
+    contarImoveis();
     // Se não tiver nenhum imóvel cadastrado, não vai exibir o título sem aparecer nada embaixo:
     if (imoveis.length === 0) {
         return;
@@ -52,8 +58,9 @@ function exibirImoveis() {
 
     for (let i = 0; i < imoveis.length; i++) {
         for (const item in imoveis[i]) {
+            // O nome da propriedade foi convertido pra titlecase e a chave "proprietario" foi substituída pela mesma palavra, mas acentuada.
             saidaImoveis.innerHTML += `<tr> 
-                <th>${item}: </th> 
+                <th>${toTitleCase(item).replace("Proprietario", "Proprietário")}: </th>
                 <td>${imoveis[i][item]}</td> 
             </tr>`;
         }
@@ -73,7 +80,7 @@ function mensagemSucesso(imovel) {
     esteImovel = imovel;
     const mensagem = document.getElementById('mensagem');
     mensagem.classList.remove('escondido');
-    mensagem.innerText = `Imóvel de ${esteImovel.Proprietario} cadastrado com sucesso!`;
+    mensagem.innerText = `Imóvel de ${esteImovel.proprietario} cadastrado com sucesso!`;
 
     setTimeout(() => {  mensagem.innerText = ""; 
     mensagem.classList.add('escondido');}, 3000);
