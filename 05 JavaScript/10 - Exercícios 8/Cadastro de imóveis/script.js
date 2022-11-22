@@ -61,7 +61,7 @@ function exibirImoveis() {
             // O nome da propriedade foi convertido pra titlecase e a chave "proprietario" foi substituída pela mesma palavra, mas acentuada.
             saidaImoveis.innerHTML += `<tr> 
                 <th>${toTitleCase(item).replace("Proprietario", "Proprietário")}: </th>
-                <td>${imoveis[i][item]}</td> 
+                <td>${imoveis[i][item].replace("nao", "não")}</td> 
             </tr>`;
         }
         saidaImoveis.innerHTML += "<br>"
