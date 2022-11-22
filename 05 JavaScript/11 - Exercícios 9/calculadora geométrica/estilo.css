@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+:root {
+    --fonte-icone: 4rem;
+}
+
 body {
     background-color: #151515;
     font: normal 15pt Arial;
@@ -39,6 +43,36 @@ div span.dados input {
     max-width: 300px;
 }
 
+.botao {
+    color: #151515;
+    width: 5rem;
+    height: 5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.233);
+    transition: all 0.3s ease-in-out;
+
+    display: inline-block;
+    margin: 0.8rem auto;
+    text-align: center;
+}
+.botao:not(.botao:last-of-type) {
+    margin-right: 0.51rem;
+}
+.botao:hover {
+    cursor: pointer;
+    color: #151515;
+    background-color: #FF0043;
+    border-color: #151515;
+}
+
+.botao > img.figura {
+    max-width: 3rem;
+    margin-top: 0.4rem;
+}
+
 select {
     display: block;
     min-width: 150px;
@@ -50,5 +84,26 @@ footer {
 }
 
 footer >p > span {
-    color: #787878;
+    color: #787878cb;
+}
+
+div#creditos {
+    background-color: #787878;
+    padding: 1rem;
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+}
+div#creditos > a {
+    display: block;
+    margin: auto;
+    max-width: fit-content;
+    color:rgb(240, 243, 78);
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+div#creditos > a:hover {
+    border-bottom: 1px solid;
 }
