@@ -1,4 +1,5 @@
 const imoveis = [];
+let index = 1;
 
 // Abre o formulário pra preenchimento com os dados do imóvel:
 function exibirFormulario() {
@@ -9,6 +10,7 @@ function exibirFormulario() {
 // Capturar inputs e salvar imóvel na lista de imóveis:
 function salvarImovel() {
     const imovel = {
+        num: index++,
         proprietario: toTitleCase(document.getElementById('nome').value),
         quartos: document.getElementById('qtd-quartos').value,
         banheiros: document.getElementById('qtd-banheiros').value,
@@ -33,7 +35,6 @@ function valorRadio() {
     let garagem = document.getElementsByName('garagem');
     for (let i = 0; i < garagem.length; i++) {
         if (garagem[i].checked) {
-            // do whatever you want with the checked radio
             return garagem[i].value;
         }
     }
@@ -60,20 +61,13 @@ function exibirImoveis() {
         for (const item in imoveis[i]) {
             // O nome da propriedade foi convertido pra titlecase e a chave "proprietario" foi substituída pela mesma palavra, mas acentuada.
             saidaImoveis.innerHTML += `<tr> 
-                <th>${toTitleCase(item).replace("Proprietario", "Proprietário")}: </th>
-                <td>${imoveis[i][item].replace("nao", "não")}</td> 
+                <th>${toTitleCase(item).toString().replace("Proprietario", "Proprietário").replace("Num", "Nº do imóvel")}: </th>
+                <td>${imoveis[i][item].toString().replace("nao", "não")}</td> 
             </tr>`;
         }
         saidaImoveis.innerHTML += "<br>"
     }
-    
-    /*
-    for (let i; i < imoveis.length; i++) {
-        saidaImoveis.textContent += `Proprietário: ${imoveis[i].nomeProprietario}`
-    }
 
-    saidaImoveis.textContent = `${imoveis[0].nomeProprietario}`
-    */
 }
 
 function mensagemSucesso(imovel) {
