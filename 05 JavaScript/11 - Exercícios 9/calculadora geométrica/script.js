@@ -58,27 +58,53 @@ function mostrarCirculo() {
 
 // ÁREA DE CÁLCULO:
 function calcularTriangulo() {
-    //
+    const baseTriangulo = Number(document.getElementById('base-triangulo').value);
+    const alturaTriangulo = Number(document.getElementById('altura-triangulo').value);
+
+    const areaTriangulo =  (baseTriangulo * alturaTriangulo) / 2;
+
+    exibicao("triângulo", areaTriangulo);
 }
 
 function calcularRetangulo() {
-    //
+    const baseRetangulo = Number(document.getElementById('base-retangulo').value);
+    const alturaRetangulo = Number(document.getElementById('altura-retangulo').value);
+
+    const areaRetangulo = (baseRetangulo * alturaRetangulo);
+
+    exibicao("retângulo", areaRetangulo);
 }
 
 function calcularQuadrado() {
-    //
+    const ladoQuadrado = Number(document.getElementById('lado-quadrado').value);
+
+    const areaQuadrado = ladoQuadrado**2;
+
+    exibicao("quadrado", areaQuadrado);
 }
 
 function calcularTrapezio() {
-    //
+    const baseMaior = Number(document.getElementById('base-maior').value);
+    const baseMenor = Number(document.getElementById('base-menor').value);
+    const alturaTrapezio = Number(document.getElementById('altura-trapezio').value);
+
+    const areaTrapezio = ((baseMaior + baseMenor) * alturaTrapezio) / 2;
+
+    exibicao("trapézio", areaTrapezio);
 }
 
 function calcularCirculo() {
-    //
+    const raioCirculo = Number(document.getElementById('raio-circulo').value);
+
+    const areaCirculo = (raioCirculo**2) * 3.14;
+
+    exibicao("círculo", areaCirculo);
 }
 
 
 // EXIBIÇÃO:
-function exibicao(figura) {
-    
+function exibicao(figura, area) {
+    const saida = document.getElementById('saida');
+
+    saida.innerText = `A área do ${figura} informado é ${area.toString().replace(".", ",")} .`
 }
