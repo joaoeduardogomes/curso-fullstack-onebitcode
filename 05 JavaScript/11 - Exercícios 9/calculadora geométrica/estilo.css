@@ -18,7 +18,7 @@ header h1 {
     color: #FF0043;
 }
 
-section {
+main {
     background-color: white;
     border-radius: 10px;
     padding: 15px;
@@ -28,6 +28,15 @@ section {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418);
 }
 
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+h3 {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
 div {
     text-align: left;
     padding: 8px;
@@ -35,8 +44,12 @@ div {
 
 div span.dados {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
     margin: 1rem 0;
+    margin-right: 4rem;
+    gap: 1rem;
 }
 
 div span.dados input {
@@ -58,13 +71,29 @@ div span.dados input {
     margin: 0.8rem auto;
     text-align: center;
 }
+/* Pra espaçar todos os botões, mas não adicionar espaço à direita do último: */
 .botao:not(.botao:last-of-type) {
     margin-right: 0.51rem;
 }
+.botao:first-of-type {
+    background-color: #FC9F5B;
+}
+.botao:nth-of-type(2) {
+    background-color: #D972FF;
+}
+.botao:nth-of-type(3) {
+    background-color: #eaebea;
+}
+.botao:nth-of-type(4) {
+    background-color: #A2D729;
+}
+.botao:last-of-type {
+    background-color: #FA824C;
+}
+
 .botao:hover {
     cursor: pointer;
     color: #151515;
-    background-color: #FF0043;
     border-color: #151515;
 }
 
@@ -73,9 +102,27 @@ div span.dados input {
     margin-top: 0.4rem;
 }
 
-select {
+section > .botao {
+    background-color: #151515!important;
+    color: #FF0043;
     display: block;
-    min-width: 150px;
+    width: fit-content;
+    height: 3rem;
+    margin: auto;
+}
+section > .botao:hover {
+    background-color: #FF0043!important;
+    color: #151515;
+}
+
+#triangulo, #retangulo, #quadrado, #trapezio, #circulo {
+    border: solid 1px #151515;
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+.escondido {
+    display: none;
 }
 
 footer {

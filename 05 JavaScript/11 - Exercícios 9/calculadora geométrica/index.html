@@ -13,35 +13,99 @@
         <h1>Calculadora Geométrica</h1>
     </header>
 
-    <section>
+    <main>
         <div>
-                <button id="btn-triangulo" class="botao" title="Triângulo">
-                    <img src="https://cdn-icons-png.flaticon.com/512/481/481058.png" alt="" class="figura">
-                </button>
-                
-                <button id="btn-retangulo" class="botao" title="Retângulo"> 
-                    <img class="figura" src="https://cdn-icons-png.flaticon.com/512/109/109788.png" alt="">
-                </button>
-                
-                <button id="btn-quadrado" class="botao" title="Quadrado">
-                    <img class="figura" src="https://cdn-icons-png.flaticon.com/512/44/44773.png" alt="">
-                </button>
+            <h2>Escolha uma figura geométrica para calcular sua área:</h2>
+            <button id="btn-triangulo" class="botao" title="Triângulo" onclick="mostrarTriangulo()">
+                <img src="https://cdn-icons-png.flaticon.com/512/481/481058.png" alt="" class="figura">
+            </button>
+            
+            <button id="btn-retangulo" class="botao" title="Retângulo" onclick="mostrarRetangulo()"> 
+                <img class="figura" src="https://cdn-icons-png.flaticon.com/512/109/109788.png" alt="">
+            </button>
+            
+            <button id="btn-quadrado" class="botao" title="Quadrado" onclick="mostrarQuadrado()">
+                <img class="figura" src="https://cdn-icons-png.flaticon.com/512/44/44773.png" alt="">
+            </button>
 
-                <button id="btn-trapezio" class="botao" title="Trapézio">
-                    <img class="figura" src="https://cdn-icons-png.flaticon.com/512/2627/2627925.png" alt="">
-                </button>
+            <button id="btn-trapezio" class="botao" title="Trapézio" onclick="mostrarTrapezio()">
+                <img class="figura" src="https://cdn-icons-png.flaticon.com/512/2627/2627925.png" alt="">
+            </button>
 
-                <button id="btn-circulo" class="botao" title="Círculo">
-                    <img class="figura" src="https://cdn-icons-png.flaticon.com/512/686/686700.png" alt="">
-                </button>
+            <button id="btn-circulo" class="botao" title="Círculo" onclick="mostrarCirculo()">
+                <img class="figura" src="https://cdn-icons-png.flaticon.com/512/686/686700.png" alt="">
+            </button>
+
+                <section id="triangulo" class="escondido">
+                    <h3>Agora informe a base e a altura do triângulo:</h3>
+                    <span class="dados">
+                        <label for="base-triangulo">Base ▲: </label>
+                        <input type="number" name="ibase-triangulo" id="base-triangulo">
+                    </span>
+                    <span class="dados">
+                        <label for="altura-triangulo">Altura ▲: </label>
+                        <input type="number" name="ialtura-triangulo" id="altura-triangulo">
+                    </span>
+                    <button class="botao" onclick="calcularTriangulo()">Calcular área ▲</buttonclass>
+                </section>
+                
+                <section id="retangulo" class="escondido">
+                    <h3>Agora informe a base e a altura do retângulo:</h3>
+                    <span class="dados">
+                        <label for="base-retangulo">Base  ▬ : </label>
+                        <input type="number" name="ibase-retangulo" id="base-retangulo">
+                    </span>
+                    <span class="dados">
+                        <label for="altura-retangulo">Altura ▬ : </label>
+                        <input type="number" name="ialtura-retangulo" id="altura-retangulo">
+                    </span>
+                    <button class="botao" onclick="calcularRetangulo()">Calcular área ▬</buttonclass>
+                </section>
+
+                <section id="quadrado" class="escondido">
+                    <h3>Agora informe o lado do quadrado:</h3>
+                    <span class="dados">
+                        <label for="lado-quadrado">Lado  ■ : </label>
+                        <input type="number" name="ilado-quadrado" id="lado-quadrado">
+                    </span>
+                    <button class="botao" onclick="calcularQuadrado()">Calcular área ■</buttonclass>
+                </section>
+
+                <section id="trapezio" class="escondido">
+                    <h3>Agora informe a base maior, a base menor e a altura do trapézio:</h3>
+                    <span class="dados">
+                        <label for="base-maior">Base maior ⏢ : </label>
+                        <input type="number" name="ibase-maior" id="base-maior">
+                    </span>
+                    <span class="dados">
+                        <label for="base-menor">Base menor ⏢ : </label>
+                        <input type="number" name="ibase-menor" id="base-menor">
+                    </span>
+                    <span class="dados">
+                        <label for="altura-trapezio">Altura ⏢ : </label>
+                        <input type="number" name="ialtura-trapezio" id="altura-trapezio">
+                    </span>
+                    <button class="botao" onclick="calcularTrapezio()">Calcular área ⏢</buttonclass>
+                </section>
+
+                <section id="circulo" class="escondido">
+                    <h3>Agora informe o raio do círculo:</h3>
+                    <span class="dados">
+                        <label for="raio-circulo">Raio ● : </label>
+                        <input type="number" name="iraio-circulo" id="raio-circulo">
+                    </span>
+                    <button class="botao" onclick="calcularCirculo()">Calcular área ●</buttonclass>
+                </section>
 
         </div>
+        
+        <hr>
         
         <div>
             Saída
         </div>
 
-    </section>
+    </main>
 
     <footer>
         <p>&copy; Curso Fullstack OBC — <span>João</span></p>
