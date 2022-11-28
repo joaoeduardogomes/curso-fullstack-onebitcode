@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex título</title>
+    <title>Sistema de Vagas de Emprego</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
-        <h1>ex título</h1>
+        <h1>Sistema de Vagas de Emprego</h1>
     </header>
 
     <section>
         <div>
-            Entrada
+            <button class="botao">Nova vaga</button>
+            <button class="botao" onclick="exibirVagas()">visualizar vagas</button>
         </div>
         
-        <div>
-            Saída
+        <hr>
+
+        <div id="saida">
+            <table id="tabela"></table>
         </div>
 
     </section>

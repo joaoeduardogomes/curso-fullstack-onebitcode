@@ -39,9 +39,40 @@ div span.dados input {
     max-width: 300px;
 }
 
-select {
-    display: block;
-    min-width: 150px;
+.botao {
+    color: #151515;
+    background-color: #cfcfcf;
+    width: fit-content;
+    height: 3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.233);
+    transition: all 0.3s ease-in-out;
+
+    display: inline-block;
+    margin: 0.8rem auto;
+    text-align: center;
+}
+.botao:nth-child(2) {
+    background-color: #FC9F5B;
+    color: black;
+}
+.botao:hover {
+    cursor: pointer;
+    color: #151515;
+    background-color: #FF0043;
+    border-color: #151515;
+}
+
+caption { 
+    background-color: #151515;
+    color:white;
+    width: 30rem;
+    padding: 0.3rem;
+    border-radius: 15px;
+    font-weight: 700;
 }
 
 footer {
