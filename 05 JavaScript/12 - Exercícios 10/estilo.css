@@ -102,12 +102,6 @@ caption {
     background-color: #FF0043;
 }
 
-#inscricao {
-    display: block;
-    z-index: 3;
-    background-color: #cfcfcf;
-    border-radius: 15px;
-}
 
 footer {
     text-align: center;

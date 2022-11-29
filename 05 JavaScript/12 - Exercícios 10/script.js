@@ -1,7 +1,7 @@
 let index = 1;
 const vagas = [
     {
-        indice: index++,
+        indice: 0,
         funcao: "Tradutor JP-PTBR",
         descricao: "Traduzir capítulos semanais de mangá.",
         dataLimite: "05/02/2023",
@@ -9,7 +9,7 @@ const vagas = [
         inscritos: []
     },
     {
-        indice: index++,
+        indice: 0,
         funcao: "Desenvolvedor web",
         descricao: "Criar e editar páginas web conforme demanda.",
         dataLimite: "08/03/2023",
@@ -19,6 +19,8 @@ const vagas = [
 ];
 
 const formCadastro = document.getElementById('formulario');
+
+gerarIndice();
 
 function exibirForm() {
     formCadastro.classList.toggle('escondido');
@@ -30,6 +32,8 @@ function exibirVagas() {
     const tabela = document.getElementById('tabela');
     tabela.innerHTML = "<caption>Vagas abertas:</caption>"
 
+    gerarIndice();
+
     for (let i = 0; i < vagas.length; i++) {
         for (let item in vagas[i]) {
             tabela.innerHTML += `<tr>
@@ -39,8 +43,8 @@ function exibirVagas() {
         }
 
         tabela.innerHTML += ` <td colspan="3">         
-        <button class="botao">Candidatar-se</button>
-        <button class="botao">Excluir</button>
+        <button class="botao" onclick="candidatar(${i})">Candidatar-se</button>
+        <button class="botao" onclick="excluirVaga(${i})">Excluir</button>
         </td>
         `
 
@@ -53,13 +57,11 @@ function exibirVagas() {
     th.forEach((titulo) => {
         titulo.setAttribute("scope", "row");
     });
-
-    console.log(vagas)
 }
 
 function salvarVaga() {
     const vaga = {
-        indice: index++,
+        indice: 0,
         funcao: document.getElementById('funcao').value,
         descricao: document.getElementById('descricao').value,
         dataLimite: pegarData(),
@@ -85,6 +87,36 @@ function pegarData() {
         mesF = (mes.length == 1) ? '0' + mes : mes,
         anoF = data.getFullYear();
     return diaF + "/" + mesF + "/" + anoF;
+}
+
+// Vai gerar o índice dinamicamente:
+function gerarIndice() {
+    for (let i = 0; i < vagas.length; i++) {
+        vagas[i].indice = i + 1;
+    }
+}
+
+function excluirVaga(pos) {
+    // Um confirm vai perguntar se queremos mesmo excluir a vaga:
+    confirmacao = window.confirm("Deseja realmente excluir esta vaga?");
+    if (!confirmacao) {
+        // Se o cofnrim for false, o programa cancela a exclusão:
+        return;
+    }
+    
+    // Se o confirm for true, a exclusão é executada:
+    vagas.splice(pos, 1);
+
+    // Por fim, ele mostra a lista de vagas atualizada:
+    exibirVagas();
+}
+
+function candidatar(pos) {
+    const nomeCandidato = window.prompt("Informe seu nome: ");
+    vagas[pos].inscritos.push(toTitleCase(nomeCandidato));
+    vagas[pos].candidatos++;
+    exibirVagas();
+    console.log(vagas);
 }
 
 // Função auxiliar:
