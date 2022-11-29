@@ -14,16 +14,43 @@
 
     <section>
         <div>
-            <button class="botao">Nova vaga</button>
+            <button class="botao" onclick="exibirForm()">Nova vaga</button>
             <button class="botao" onclick="exibirVagas()">visualizar vagas</button>
+
+            <div id="formulario" class="escondido">
+                <span class="dados">
+                    <label for="funcao">Função: </label>
+                    <input type="text" name="ifuncao" id="funcao">
+                </span>
+
+                <span class="dados">
+                    <label for="descricao">Descrição: </label>
+                    <textarea name="idescricao" id="descricao" cols="30" rows="10"></textarea>
+                </span>
+
+                <span class="dados">
+                    <label for="dataLimite">Data limite: </label>
+                    <input type="date" name="idataLimite" id="dataLimite">
+                </span>
+
+                <button class="botao" id="enviar" onclick="salvarVaga()">Enviar</button>
+
+                <p id="mensagem" class="escondido"></p>
+            </div>
         </div>
-        
         <hr>
 
         <div id="saida">
             <table id="tabela"></table>
         </div>
 
+        <div id="inscricao">
+            <div id="formInscricao">
+                <label for="nome">Nome: </label>
+                <input type="text" name="inome" id="nome">
+            </div>
+        </div>
+        
     </section>
 
     <footer>

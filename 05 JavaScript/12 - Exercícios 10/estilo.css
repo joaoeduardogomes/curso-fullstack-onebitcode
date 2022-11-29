@@ -31,12 +31,14 @@ div {
 
 div span.dados {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 1rem 0;
+    gap: 1rem;
 }
 
 div span.dados input {
-    max-width: 300px;
+    width: 254px;
+    margin-left: 1.4rem;
 }
 
 .botao {
@@ -62,8 +64,25 @@ div span.dados input {
 .botao:hover {
     cursor: pointer;
     color: #151515;
-    background-color: #FF0043;
     border-color: #151515;
+}
+
+button#enviar {
+    display: block;
+    background-color: #82bcec;
+}
+
+.escondido {
+    display: none;
+}
+
+#mensagem {
+    font-size: 1rem;
+    text-align: center;
+    background-color: rgba(178, 229, 155, 0.658);
+    color: rgb(5, 87, 5);
+    padding: 0.5rem;
+    border-radius: 15px;
 }
 
 caption { 
@@ -73,6 +92,21 @@ caption {
     padding: 0.3rem;
     border-radius: 15px;
     font-weight: 700;
+}
+
+#saida .botao {
+    background-color: #A2D729;
+    display: inline-block;
+}
+#saida .botao:nth-child(even) {
+    background-color: #FF0043;
+}
+
+#inscricao {
+    display: block;
+    z-index: 3;
+    background-color: #cfcfcf;
+    border-radius: 15px;
 }
 
 footer {
