@@ -116,7 +116,6 @@ function candidatar(pos) {
     vagas[pos].inscritos.push(toTitleCase(nomeCandidato));
     vagas[pos].candidatos++;
     exibirVagas();
-    console.log(vagas);
 }
 
 // Função auxiliar:
