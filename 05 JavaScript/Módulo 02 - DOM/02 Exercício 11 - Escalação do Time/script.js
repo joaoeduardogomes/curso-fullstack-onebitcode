@@ -21,6 +21,10 @@ function escalarJogador() {
 
     time.push(jogador);
 
+    // limpando o formulário:
+    $(':input').val('');
+    $('select').attr('selected', false);
+
     console.log(jogador);
     console.log(time);
 }
@@ -46,8 +50,14 @@ function capturarValores() {
         alert("Informe o número do jogador a ser escalado.");
         return;
     }
+    // verificando se já existeu m jogador com o mesmo número:
+    const repetido = time.some(el => el.numero === numeroJogador);
+    if (repetido) {
+        alert("O número já está atribuído a outro jogador! \nEscolha outro número.");
+        return;
+    }
 
-    
+
     return {posicaoJogador, nomeJogador, numeroJogador};
 }
 
