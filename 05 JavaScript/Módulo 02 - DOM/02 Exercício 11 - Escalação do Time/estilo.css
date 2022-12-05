@@ -42,9 +42,9 @@ div span.dados input {
 .botao {
     background-color: #151515;
     color: #FF0043;
-    width: 20%;
+    width: fit-content;
     height: fit-content;
-    padding: 0.5rem;
+    padding: 0.8rem;
     font-size: 1.2rem;
     font-weight: bold;
     border: 2px solid transparent;
@@ -59,9 +59,13 @@ div span.dados input {
     border-color: #151515;
 }
 
-select {
-    display: block;
-    min-width: 150px;
+.escondido {
+    display: none;
+}
+
+select#posicao > option:first-of-type {
+    background-color: #c4c1c1;
+    padding: 0.3rem;
 }
 
 footer {
