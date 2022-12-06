@@ -39,26 +39,6 @@ div span.dados input {
     max-width: 300px;
 }
 
-.botao {
-    background-color: #151515;
-    color: #FF0043;
-    width: fit-content;
-    height: fit-content;
-    padding: 0.8rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: 2px solid transparent;
-    border-radius: 10px;
-    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.233);
-    transition: all 0.3s ease-in-out;
-}
-.botao:hover {
-    cursor: pointer;
-    background-color: #FF0043;
-    color: #151515;
-    border-color: #151515;
-}
-
 .escondido {
     display: none;
 }
