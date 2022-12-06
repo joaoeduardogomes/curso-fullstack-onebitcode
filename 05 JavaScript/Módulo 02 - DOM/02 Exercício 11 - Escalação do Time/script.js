@@ -33,8 +33,7 @@ function escalarJogador() {
     $(':input').val('');
     $('select').attr('selected', false);
 
-    console.log(jogador);
-    console.log(time);
+    exibirTime()
 }
 function capturarValores() {
     // capturando a posição do jogador:
@@ -73,9 +72,8 @@ function capturarValores() {
 function removerJogador() {
     const remover = document.getElementById('numero-remove').value;
 
+    // busca o elemento que tem o número igual ao recebido por 'remover':
     const remocao = time.filter(el => el.numero === remover);
-    console.log("remoção:")
-    console.log(remocao[0]);
 
     // Pedindo confirmação (precisa passar a posição [0] porque o filter retorna uma string)
     const confirmacao = window.confirm(`Deseja remover o jogador ${remocao[0].nome} do time?\n
@@ -85,13 +83,26 @@ function removerJogador() {
     Posição: ${remocao[0].posicao}`);
 
     if (confirmacao) {
+        // cria um novo array no qual objeto capturado por 'remocao' não existe:
         time = time.filter(el => el.numero !== remover);
     }
 
-    console.log("Sobrou:")
-    console.log(time);
+    exibirTime()
 }
 
+// Exibir time:
+function exibirTime() {
+    const saida = document.getElementById('saida');
+    
+    saida.textContent = " ";
+    saida.innerText = "Time: \n"
+    for (let i = 0; i < time.length; i++) {
+        saida.innerText += `
+        Nome: ${time[i].nome}
+        Número: ${time[i].numero}
+        Posição: ${time[i].posicao}\n`;
+    }
+}
 
 //Funções auxiliares:
 function toTitleCase(str) {
