@@ -19,7 +19,11 @@ function escalarJogador() {
         numero: numeroJogador
     }
 
-    confirmacao = window.confirm(`Tem certeza de que deseja escalar o jogador ${jogador.nome}?`);
+    const confirmacao = window.confirm(`Tem certeza de que deseja escalar o jogador ${jogador.nome}?\n
+    Dados do jogador:\n
+    Nome: ${jogador.nome}
+    Número: ${jogador.numero}
+    Posição: ${jogador.posicao}`);
 
     if (confirmacao) {
         time.push(jogador);
@@ -70,7 +74,22 @@ function removerJogador() {
     const remover = document.getElementById('numero-remove').value;
 
     const remocao = time.filter(el => el.numero === remover);
-    time.splice(remocao, 1);
+    console.log("remoção:")
+    console.log(remocao[0]);
+
+    // Pedindo confirmação (precisa passar a posição [0] porque o filter retorna uma string)
+    const confirmacao = window.confirm(`Deseja remover o jogador ${remocao[0].nome} do time?\n
+    Dados do jogador:\n
+    Nome: ${remocao[0].nome}
+    Número: ${remocao[0].numero}
+    Posição: ${remocao[0].posicao}`);
+
+    if (confirmacao) {
+        time = time.filter(el => el.numero !== remover);
+    }
+
+    console.log("Sobrou:")
+    console.log(time);
 }
 
 
@@ -84,4 +103,20 @@ function toTitleCase(str) {
 const escalar = document.getElementById('form-escalar');
 const remover = document.getElementById('form-remover');
 
-const time = [];
+let time = [
+    {
+        posicao: "zagueiro",
+        nome: "Caio Nogueira",
+        numero: "4"
+    },
+    {
+        posicao: "goleiro",
+        nome: "Pedro Pedroso",
+        numero: "8"
+    },
+    {
+        posicao: "volante",
+        nome: "Andrei Santos",
+        numero: "9"
+    }
+];
