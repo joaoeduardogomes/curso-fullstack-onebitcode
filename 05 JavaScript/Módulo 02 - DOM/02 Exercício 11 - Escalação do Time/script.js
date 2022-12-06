@@ -19,7 +19,11 @@ function escalarJogador() {
         numero: numeroJogador
     }
 
-    time.push(jogador);
+    confirmacao = window.confirm(`Tem certeza de que deseja escalar o jogador ${jogador.nome}?`);
+
+    if (confirmacao) {
+        time.push(jogador);
+    }
 
     // limpando o formulário:
     $(':input').val('');
@@ -50,7 +54,7 @@ function capturarValores() {
         alert("Informe o número do jogador a ser escalado.");
         return;
     }
-    // verificando se já existeu m jogador com o mesmo número:
+    // verificando se já existe um jogador com o mesmo número:
     const repetido = time.some(el => el.numero === numeroJogador);
     if (repetido) {
         alert("O número já está atribuído a outro jogador! \nEscolha outro número.");
@@ -59,6 +63,14 @@ function capturarValores() {
 
 
     return {posicaoJogador, nomeJogador, numeroJogador};
+}
+
+// Remover jogador da escalação:
+function removerJogador() {
+    const remover = document.getElementById('numero-remove').value;
+
+    const remocao = time.filter(el => el.numero === remover);
+    time.splice(remocao, 1);
 }
 
 
