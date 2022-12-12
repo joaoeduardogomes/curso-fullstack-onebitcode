@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Devs</title>
+</head>
+<body>
+    <h1>Cadastro de Devs</h1>
+
+    <hr>
+
+    <h2>Cadastrar novo Desenvolvedor</h2>
+    <form id="devForm">
+        <fieldset>
+            <label for="fullname">Nome completo: </label>
+            <input type="text" name="fullname" id="fullname">
+        </fieldset>
+
+        <fieldset>
+            <label>Tecnologias</label>
+            <button type="button" id="addTechBtn">Adicionar Nova</button> <!--O tipo 'button' indica que este botão não marca a finalização do formulário (ou seja, não é um submit.)-->
+            <ul id="stackInputs"></ul>
+        </fieldset>
+        <button type="submit">Cadastrar</button> <!--Este marca a finalização e o envio do formulário. O valor padrão já é 'submit', mas aqui explicitamos isso.-->
+
+    </form>
+
+    <script src="./index.js"></script>
+</body>
+</html>
