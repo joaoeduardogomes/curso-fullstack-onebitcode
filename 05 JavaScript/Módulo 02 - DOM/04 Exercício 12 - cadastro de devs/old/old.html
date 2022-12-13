@@ -1,0 +1,56 @@
+    <section>
+        <div>
+            <button class="btn btn-primary">Cadastrar Dev</button>
+
+            <div id="formulario" class="mt-4">
+                <p>Dados do desenvolvedor:</p>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" id="basic-addon1" for="nome">Nome completo: </label>
+                    <input type="text" class="form-control" placeholder="Nome completo" aria-label="Username"
+                        aria-describedby="basic-addon1" name="inome" id="nome">
+                </div>
+
+                <label for="tecnologia">Tecnologias:</label>
+                <div id="area-tecnologias" >
+                    <span class="row gap-2 mb-2">
+                        <input type="text" placeholder="Tecnologia" name="itecnologia" id="tecnologia" list="lista-tecnologias" class="col-4 coll">
+                        <datalist id="lista-tecnologias">
+                            <option value="HTML"></option>
+                            <option value="CSS"></option>
+                            <option value="JavaScript"></option>
+                            <option value="Python"></option>
+                            <option value="GO"></option>
+                            <option value="Rust"></option>
+                            <option value="React"></option>
+                            <option value="PostgreSQL"></option>
+                            <option value="MySQL"></option>
+                            <option value="MongoDB"></option>
+                        </datalist>
+                        <select name="iexperiencia" id="experiencia" class="col-6 coll">
+                            <option value="" selected class="bg-secondary bg-opacity-50">--- Experiência ---</option>
+                            <option value="0-2">0-2 anos</option>
+                            <option value="3-4">3-4 anos</option>
+                            <option value="5+">5+ anos</option>
+                        </select>
+                        <button class="btn btn-outline-danger col-1 coll" onclick="removerLinhaTec(this.ParentNode)">
+                            <i class="bi bi-dash-lg"></i>
+                        </button>
+                    </span>
+
+                </div>
+
+                <button id="botao-adicionar" class="btn btn-outline-primary" onclick="addLinhaTec()">
+                    <i class="bi bi-plus-lg"></i>
+                </button>
+
+                <button type="submit" class="btn btn-primary d-block mt-3"b>Cadastrar</button>
+            </div>
+        </div>
+
+        <hr>
+        
+        <div>
+            <button class="btn btn-success">Ver Devs Cadastrados</button>
+        </div>
+
+    </section>
