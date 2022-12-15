@@ -13,6 +13,12 @@ document.querySelectorAll('.charKey').forEach(function(charKeyBtn) {
     })
 });
 
+// Implementando o botão 'clear(c)'
+document.getElementById('clear').addEventListener('click', function() {
+    input.value = "";
+    input.focus(); // depois de apagado, foca no input.
+})
+
 input.addEventListener('keydown', function (ev) {
     ev.preventDefault(); // impede que seja inserido imediatamente o valor da tecla pressionada.
     if (allowedKeys.includes(ev.key)) {
