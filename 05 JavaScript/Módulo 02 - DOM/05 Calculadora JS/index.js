@@ -37,6 +37,55 @@ input.addEventListener('keydown', function (ev) {
 });
 
 function calculate() {
+    //! caso digitemos uma conta inválida:
+    resultInput.value = "ERROR";
+    resultInput.classList.add('error');
+
+    // se der tudo certo:
     const result = eval(input.value); // A função 'eval' abre brecha de segurança pra executar código JS. Cuidado ao usá-la.
     resultInput.value = result;
+
+    //! retirando o fundo vermelho do erro pra não poluir o visual:
+    resultInput.classList.remove('error');
 }
+
+// Trocar o tema (claro/escuro):
+document.getElementById('themeSwitcher').addEventListener('click', function() {
+    if (main.dataset.theme === 'dark') {
+        root.style.setProperty('--bg-color', '#f1f5f9');
+        root.style.setProperty('--border-color', '#aaa');
+        root.style.setProperty('--font-color', '#212529');
+        root.style.setProperty('--primary-color', '#26834a');
+        main.dataset.theme = 'light';
+    }
+    else {
+        root.style.setProperty('--bg-color', '#212529');
+        root.style.setProperty('--border-color', '#666');
+        root.style.setProperty('--font-color', '#f1f5f9');
+        root.style.setProperty('--primary-color', '#4dff91');
+        main.dataset.theme = 'dark';
+    }
+});
+
+// Botão de copiar pra área de transferência:
+document.getElementById('copyToClipboard').addEventListener('click', function(ev) {
+    const button = ev.currentTarget;
+    if (button.innerText === "Copy") {
+        // avisando pro usuário que foi copiado:
+        button.innerText = "Copied!";
+        button.classList.add('success');
+
+        // copiando de fato o conteúdo do input:
+        window.navigator.clipboard.writeText(resultInput.value);
+    } 
+    //? Para o botão de cópia retornar ao estado padrão, o instrutor usou:
+    // else {
+    //     button.innerText = "Copy";
+    //     button.classList.remove('success');
+    // }
+    //? Eu usei:
+    setTimeout(() => {
+        button.innerText = "Copy";
+        button.classList.remove('success');
+    }, 1500);
+});
