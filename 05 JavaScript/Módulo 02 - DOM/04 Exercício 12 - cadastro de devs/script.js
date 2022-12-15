@@ -16,6 +16,20 @@ function createInput(id, value, name, type = 'text', placeholder = '', required)
     return input
 }
 
+function exibirDevs() {
+    const saida = document.getElementById('saida');
+    
+    saida.innerText = "";
+
+    for (const dev in developers) {
+        saida.innerText += `Nome: ${developers[dev].fullname}\n`;
+
+        developers[dev].technologies.forEach(technology => saida.innerText += `Tecnologia: ${technology.name}. Experiência: ${technology.exp}\n`);
+
+        saida.innerText += "\n";
+    }
+}
+
 const addTechBtn = document.getElementById('addTechBtn')
 const form = document.getElementById('devForm')
 const developers = []
