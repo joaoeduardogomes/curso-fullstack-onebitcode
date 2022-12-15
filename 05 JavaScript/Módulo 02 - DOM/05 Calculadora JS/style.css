@@ -9,6 +9,8 @@
     --border-color: #666;
     --font-color: #f1f5f9;
     --primary-color: #4dff91;
+    --secondary-color: #FF715B;
+    --tertiary-color: #6290C3;
     --error-color: #ff0043;
 }
 
@@ -48,6 +50,12 @@ button {
     font-weight: 700;
     padding: .5rem 1rem;
     transition: .15s;
+}
+button#clear {
+    background-color: var(--secondary-color);
+}
+button#equal {
+    background-color: var(--tertiary-color);
 }
 
 input {

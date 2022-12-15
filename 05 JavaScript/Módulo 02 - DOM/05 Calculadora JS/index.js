@@ -19,6 +19,9 @@ document.getElementById('clear').addEventListener('click', function() {
     input.focus(); // depois de apagado, foca no input.
 })
 
+// Implementando botão '=':
+document.getElementById('equal').addEventListener('click', calculate)
+
 input.addEventListener('keydown', function (ev) {
     ev.preventDefault(); // impede que seja inserido imediatamente o valor da tecla pressionada.
     if (allowedKeys.includes(ev.key)) {
@@ -34,5 +37,6 @@ input.addEventListener('keydown', function (ev) {
 });
 
 function calculate() {
-    console.log("Calculado")
+    const result = eval(input.value); // A função 'eval' abre brecha de segurança pra executar código JS. Cuidado ao usá-la.
+    resultInput.value = result;
 }
