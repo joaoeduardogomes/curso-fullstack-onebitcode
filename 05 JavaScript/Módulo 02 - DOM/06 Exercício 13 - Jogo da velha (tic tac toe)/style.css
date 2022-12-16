@@ -13,11 +13,14 @@ body {
 }
 #gameBoard span {
     background-color: #ddd;
-    cursor: pointer;
     display: grid;
     place-content: center; /* esta configuração com display grid é uma maneira fácil de centralizar um elemento */
     font-size: 5rem;
 }
-#gameboard span.win {
+#gameBoard span.win {
     background-color: #25a340;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
