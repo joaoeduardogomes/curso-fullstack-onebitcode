@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+}
+
+#gameBoard {
+    background-color: #232323;
+    display: grid;
+    grid-template-columns: 6rem 6rem 6rem;
+    grid-template-rows: 6rem 6rem 6rem;
+    gap: .5rem;
+    margin-bottom: 1.5rem;
+    max-width: 19rem; /* soma do tamanho das colunas + o gap. */
+}
+#gameBoard span {
+    background-color: #ddd;
+    cursor: pointer;
+    display: grid;
+    place-content: center; /* esta configuração com display grid é uma maneira fácil de centralizar um elemento */
+    font-size: 5rem;
+}
+#gameboard span.win {
+    background-color: #25a340;
+}
